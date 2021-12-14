@@ -26,6 +26,61 @@ instead, you can use `sbt ci` alias which runs scalafmt checker agains `src/{mai
 
 after running `sbt pack`, you will see there is an executable shell located in `target/pack/bin/xurl`. you can easily run just by calling this generated shell file.
 
+## endpoints
+
+- `GET /api/v1/urls`
+
+Returns all stored urls in database. Example response:
+
+```json
+[
+    {
+        "code": "Fb",
+        "address": "https://httpbin.org/get?from=xurl2",
+        "hit": 0,
+        "created_at": "2021-12-14T16:03:00.968752"
+    }
+]
+```
+
+- `GET /api/v1/urls/<code>`
+
+Returns the detail for a given code:
+
+```json
+{
+    "code": "Fb",
+    "address": "https://httpbin.org/get?from=xurl2",
+    "hit": 0,
+    "created_at": "2021-12-14T16:03:00.968752"
+}
+```
+
+- `POST /v1/api/urls`
+
+Shortens the given url and stores in db.
+
+Example Request:
+```json
+{
+    "url": "https://httpbin.org/get?from=xurl2"
+}
+```
+
+Example Response:
+```json
+{
+    "code": "Fb",
+    "address": "https://httpbin.org/get?from=xurl2",
+    "hit": 0,
+    "created_at": "2021-12-14T16:03:00.968752"
+}
+```
+
+- `GET /<code>`
+
+Redirects the user to associated url for a given code.
+
 ## todo
 
 - better logging
