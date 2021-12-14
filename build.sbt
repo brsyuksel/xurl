@@ -12,8 +12,11 @@ lazy val root = (project in file("."))
     scalacOptions ++= List("-Ymacro-annotations", "-Yrangepos", "-Wconf:cat=unused:info"),
     Defaults.itSettings,
     testFrameworks += TestFramework("weaver.framework.CatsEffect"),
-    libraryDependencies ++= dependencies
+    libraryDependencies ++= dependencies,
+    packGenerateWindowsBatFile := false,
+    packMain := Map("xurl" -> "xurl.main"),
   )
+  .enablePlugins(PackPlugin)
 
 addCommandAlias("fmt", "scalafmtAll")
 addCommandAlias("ci", "scalafmtCheckAll;test;it:test")

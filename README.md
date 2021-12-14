@@ -22,6 +22,10 @@ before running tests, make sure your containers running:
 use `sbt test` command to run unit tests, `sbt it:test` for integration tests.
 instead, you can use `sbt ci` alias which runs scalafmt checker agains `src/{main, test, it}` then runs both cases.
 
+## build and run
+
+after running `sbt pack`, you will see there is an executable shell located in `target/pack/bin/xurl`. you can easily run just by calling this generated shell file.
+
 ## todo
 
 - better logging
