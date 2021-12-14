@@ -1,0 +1,17 @@
+version: '3'
+
+services: 
+  postgres:
+    image: postgres:13-alpine
+    environment: 
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: xurl
+    ports: 
+      - 5432:5432
+    volumes: 
+      - ./ci/ddl:/docker-entrypoint-initdb.d
+  
+  redis:
+    image: redis:6-alpine
+    ports: 
+      - 6379:6379
