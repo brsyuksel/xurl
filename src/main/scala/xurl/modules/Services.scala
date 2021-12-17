@@ -3,8 +3,9 @@ package xurl.modules
 import scala.concurrent.duration.FiniteDuration
 
 import xurl.caching.RedisStringCache
+import xurl.health._
 import xurl.serial.{ BaseNPositive, SkunkSerial }
-import xurl.services.{ Routing, SerialCode, Shortener }
+import xurl.services._
 import xurl.url.{ SkunkUrls, Urls }
 
 import cats.effect._
@@ -14,7 +15,8 @@ import skunk.Session
 sealed abstract class Services[F[_]] private (
     val urls: Urls[F],
     val routing: Routing[F],
-    val shortener: Shortener[F]
+    val shortener: Shortener[F],
+    val healthCheck: HealthCheck[F]
 )
 
 object Services {
@@ -34,6 +36,10 @@ object Services {
 
     val routing = Routing.make(skunkUrls, redisCache)
 
-    new Services[F](skunkUrls, routing, shortener) {}
+    val pgHealth    = new SkunkHealth[F](pg)
+    val redisHealth = new RedisHealth[F](redis)
+    val healthCheck = HealthCheck.make[F](pgHealth, redisHealth)
+
+    new Services[F](skunkUrls, routing, shortener, healthCheck) {}
   }
 }
