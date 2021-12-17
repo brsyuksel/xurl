@@ -1,10 +1,9 @@
 package xurl.serial
 
 import cats.effect.IO
-
+import org.scalacheck.Gen
 import weaver.SimpleIOSuite
 import weaver.scalacheck.Checkers
-import org.scalacheck.Gen
 
 object BaseNPositiveSuite extends SimpleIOSuite with Checkers {
   private val letters = "abc123def456"

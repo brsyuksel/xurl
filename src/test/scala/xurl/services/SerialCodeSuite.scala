@@ -1,10 +1,10 @@
 package xurl.services
 
+import xurl.serial.{ BaseNPositive, Serial }
+
 import cats.effect._
 import cats.implicits._
 import weaver.SimpleIOSuite
-
-import xurl.serial.{ BaseNPositive, Serial }
 
 object SerialCodeSuite extends SimpleIOSuite {
   test("next uniqueness") {

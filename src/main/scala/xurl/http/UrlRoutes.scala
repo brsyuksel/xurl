@@ -1,18 +1,17 @@
 package xurl.http
 
+import xurl.http.params._
+import xurl.services.Shortener
+import xurl.url.Urls
+import xurl.url.model.Code
+
 import cats._
 import cats.effect._
 import cats.implicits._
 import org.http4s._
 import org.http4s.circe.CirceEntityCodec._
-import org.http4s.circe.JsonDecoder
 import org.http4s.dsl.Http4sDsl
 import org.http4s.server.Router
-
-import xurl.url.Urls
-import xurl.url.model.Code
-import xurl.services.Shortener
-import xurl.http.params._
 
 final case class UrlRoutes[F[_]: Concurrent: MonadThrow](urls: Urls[F], shortener: Shortener[F]) extends Http4sDsl[F] {
   private[http] val prefix = "/urls"

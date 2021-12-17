@@ -1,11 +1,11 @@
 package xurl.services
 
+import xurl.url.Urls
+import xurl.url.model._
+
 import cats.effect._
 import cats.implicits._
 import weaver.SimpleIOSuite
-
-import xurl.url.Urls
-import xurl.url.model._
 
 object ShortenerSuite extends SimpleIOSuite {
   test("shorten") {

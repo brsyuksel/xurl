@@ -2,11 +2,11 @@ package xurl.services
 
 import scala.util.control.NoStackTrace
 
-import cats.MonadThrow
-import cats.implicits._
-
 import xurl.url.Urls
 import xurl.url.model.{ Address, Code, Url }
+
+import cats.MonadThrow
+import cats.implicits._
 
 trait Shortener[F[_]] {
   def shorten(address: Address): F[Url]

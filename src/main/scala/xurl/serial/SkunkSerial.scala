@@ -1,7 +1,6 @@
 package xurl.serial
 
 import cats.effect._
-import cats.implicits._
 import skunk._
 import skunk.codec.numeric.int8
 import skunk.implicits._

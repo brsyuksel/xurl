@@ -1,12 +1,12 @@
 package xurl.resources
 
-import cats.effect._
-import org.http4s.HttpApp
-import org.http4s.server.Server
-import org.http4s.ember.server.EmberServerBuilder
-import com.comcast.ip4s.{ Host, Port }
-
 import xurl.config.AppConfig
+
+import cats.effect._
+import com.comcast.ip4s.{ Host, Port }
+import org.http4s.HttpApp
+import org.http4s.ember.server.EmberServerBuilder
+import org.http4s.server.Server
 
 trait HttpServer[F[_]] {
   def server: Resource[F, Server]

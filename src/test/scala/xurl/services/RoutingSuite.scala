@@ -1,12 +1,12 @@
 package xurl.services
 
+import xurl.caching.Cache
+import xurl.url.Urls
+import xurl.url.model._
+
 import cats.effect._
 import cats.implicits._
 import weaver.SimpleIOSuite
-
-import xurl.url.model._
-import xurl.url.Urls
-import xurl.caching.Cache
 
 object RoutingSuite extends SimpleIOSuite {
   test("resolve:from-cache") {

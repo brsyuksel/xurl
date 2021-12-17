@@ -1,12 +1,12 @@
 package xurl.url
 
+import xurl.url.model._
+
 import cats.effect._
 import cats.implicits._
 import skunk._
 import skunk.codec.all._
 import skunk.implicits._
-
-import xurl.url.model._
 
 final case class SkunkUrls[F[_]: Concurrent](pg: Resource[F, Session[F]]) extends Urls[F] {
   import SkunkUrls._

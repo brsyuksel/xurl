@@ -1,9 +1,9 @@
 package xurl.services
 
+import xurl.serial.{ BaseN, Serial }
+
 import cats.FlatMap
 import cats.implicits._
-
-import xurl.serial.{ BaseN, Serial }
 
 trait SerialCode[F[_]] {
   def next: F[String]

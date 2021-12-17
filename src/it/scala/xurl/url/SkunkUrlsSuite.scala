@@ -1,15 +1,15 @@
 package xurl.url
 
-import cats.effect._
-import cats.implicits._
-import skunk._
-import skunk.implicits._
-import natchez.Trace.Implicits.noop
-import weaver.IOSuite
-
 import xurl.serial.{ BaseNPositive, Serial }
 import xurl.services.SerialCode
 import xurl.url.model._
+
+import cats.effect._
+import cats.implicits._
+import natchez.Trace.Implicits.noop
+import skunk._
+import skunk.implicits._
+import weaver.IOSuite
 
 object SkunkUrlsSuite extends IOSuite {
 

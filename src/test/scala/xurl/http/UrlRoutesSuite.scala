@@ -2,23 +2,22 @@ package xurl.http
 
 import java.time.{ LocalDateTime, ZoneOffset }
 
-import cats.effect._
-import cats.implicits._
-import org.http4s._
-import org.http4s.Method._
-import org.http4s.client.dsl.io._
-import org.http4s.syntax.literals._
-import org.http4s.circe._
-import io.circe._
-import io.circe.literal._
-import io.circe.syntax._
-import weaver.SimpleIOSuite
-import weaver.scalacheck.Checkers
-import org.scalacheck.Gen
-
 import xurl.services.Shortener
 import xurl.url.Urls
 import xurl.url.model._
+
+import cats.effect._
+import cats.implicits._
+import io.circe.literal._
+import io.circe.syntax._
+import org.http4s.Method._
+import org.http4s._
+import org.http4s.circe._
+import org.http4s.client.dsl.io._
+import org.http4s.syntax.literals._
+import org.scalacheck.Gen
+import weaver.SimpleIOSuite
+import weaver.scalacheck.Checkers
 
 object UrlRoutesSuite extends SimpleIOSuite with Checkers {
   val strGen: Gen[String] =

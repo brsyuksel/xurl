@@ -1,18 +1,15 @@
 package xurl.http
 
+import xurl.services.Routing
+import xurl.url.model.Code
+
 import cats._
 import cats.effect._
 import cats.implicits._
 import org.http4s._
-import org.http4s.implicits._
-import org.http4s.headers._
-import org.http4s.circe.CirceEntityCodec._
-import org.http4s.circe.JsonDecoder
 import org.http4s.dsl.Http4sDsl
-import org.http4s.server.Router
-
-import xurl.services.Routing
-import xurl.url.model.{ Address, Code }
+import org.http4s.headers._
+import org.http4s.implicits._
 
 final case class RedirectRoutes[F[_]: Concurrent: MonadThrow](routing: Routing[F]) extends Http4sDsl[F] {
 
