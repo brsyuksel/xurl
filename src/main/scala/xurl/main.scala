@@ -1,14 +1,13 @@
 package xurl
 
+import xurl.config.AppConfig
+import xurl.modules._
+import xurl.resources._
+
 import cats.effect._
-import cats.effect.implicits._
+import dev.profunktor.redis4cats.log4cats._
 import org.typelevel.log4cats.Logger
 import org.typelevel.log4cats.slf4j.Slf4jLogger
-import dev.profunktor.redis4cats.log4cats._
-
-import xurl.config.AppConfig
-import xurl.resources._
-import xurl.modules._
 
 object main extends IOApp.Simple {
   implicit val logger = Slf4jLogger.getLogger[IO]

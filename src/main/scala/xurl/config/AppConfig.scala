@@ -5,7 +5,6 @@ import scala.util.control.NoStackTrace
 
 import cats._
 import cats.implicits._
-import cats.effect._
 import pureconfig._
 import pureconfig.generic.auto._
 

@@ -4,8 +4,8 @@ import scala.concurrent.duration._
 
 import cats.effect._
 import cats.implicits._
-import dev.profunktor.redis4cats.{ Redis, RedisCommands }
 import dev.profunktor.redis4cats.log4cats._
+import dev.profunktor.redis4cats.{ Redis, RedisCommands }
 import org.typelevel.log4cats.noop.NoOpLogger
 import weaver.IOSuite
 

@@ -1,16 +1,14 @@
 package xurl.resources
 
-import cats._
-import cats.implicits._
+import xurl.config.AppConfig
+
 import cats.effect._
 import cats.effect.std.Console
-import skunk._
-import skunk.implicits._
-import natchez.Trace.Implicits.noop
-import dev.profunktor.redis4cats.{ Redis, RedisCommands }
+import cats.implicits._
 import dev.profunktor.redis4cats.effect.MkRedis
-
-import xurl.config.AppConfig
+import dev.profunktor.redis4cats.{ Redis, RedisCommands }
+import natchez.Trace.Implicits.noop
+import skunk._
 
 sealed abstract class AppResources[F[_]](
     val pg: Resource[F, Session[F]],

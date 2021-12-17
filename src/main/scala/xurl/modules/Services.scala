@@ -2,14 +2,14 @@ package xurl.modules
 
 import scala.concurrent.duration.FiniteDuration
 
-import cats.effect._
-import skunk.Session
-import dev.profunktor.redis4cats.RedisCommands
-
-import xurl.url.{ SkunkUrls, Urls }
-import xurl.serial.{ BaseNPositive, SkunkSerial }
 import xurl.caching.RedisStringCache
+import xurl.serial.{ BaseNPositive, SkunkSerial }
 import xurl.services.{ Routing, SerialCode, Shortener }
+import xurl.url.{ SkunkUrls, Urls }
+
+import cats.effect._
+import dev.profunktor.redis4cats.RedisCommands
+import skunk.Session
 
 sealed abstract class Services[F[_]] private (
     val urls: Urls[F],

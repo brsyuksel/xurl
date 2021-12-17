@@ -1,19 +1,15 @@
 package xurl.http
 
+import xurl.services.Routing
+import xurl.url.model.Address
+
 import cats.effect._
 import cats.implicits._
-import org.http4s._
 import org.http4s.Method._
+import org.http4s._
 import org.http4s.client.dsl.io._
 import org.http4s.syntax.literals._
-import org.http4s.circe._
-import io.circe._
-import io.circe.literal._
-import io.circe.syntax._
 import weaver.SimpleIOSuite
-
-import xurl.services.Routing
-import xurl.url.model.{ Address, Code }
 
 object RedirectRoutesSuite extends SimpleIOSuite {
   private def mkRouting: Routing[IO] =

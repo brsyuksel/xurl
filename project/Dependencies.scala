@@ -16,6 +16,8 @@ object Dependencies {
     val slf4j      = "1.7.32"
 
     val weaver = "0.7.9"
+
+    val scalafixOrganizeImports = "0.6.0"
   }
 
   object libraries {
@@ -46,6 +48,8 @@ object Dependencies {
     val weaverScalaCheck = "com.disneystreaming" %% "weaver-scalacheck" % versions.weaver
     val log4catsNoOp     = "org.typelevel"       %% "log4cats-noop"     % versions.log4cats
     val circeLiteral     = "io.circe"            %% "circe-literal"     % versions.circe
+
+    val scalafixOrganizeImports = "com.github.liancheng" %% "organize-imports" % versions.scalafixOrganizeImports
   }
 
   val runtime = Seq(

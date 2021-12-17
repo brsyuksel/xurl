@@ -2,14 +2,14 @@ package xurl.modules
 
 import scala.concurrent.duration._
 
+import xurl.http.{ RedirectRoutes, UrlRoutes }
+
 import cats.effect._
 import cats.implicits._
 import org.http4s._
 import org.http4s.implicits._
 import org.http4s.server.Router
 import org.http4s.server.middleware._
-
-import xurl.http.{ RedirectRoutes, UrlRoutes }
 
 sealed abstract class HttpAPI[F[_]: Async] private (services: Services[F]) {
   private val urlRoutes      = new UrlRoutes[F](services.urls, services.shortener).routes

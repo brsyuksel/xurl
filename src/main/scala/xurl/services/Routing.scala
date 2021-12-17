@@ -2,12 +2,12 @@ package xurl.services
 
 import scala.util.control.NoStackTrace
 
+import xurl.caching.Cache
+import xurl.url.Urls
+import xurl.url.model.{ Address, Code }
+
 import cats.MonadThrow
 import cats.implicits._
-
-import xurl.url.model.{ Address, Code, Url }
-import xurl.url.Urls
-import xurl.caching.Cache
 
 trait Routing[F[_]] {
   def resolve(code: Code): F[Address]

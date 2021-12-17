@@ -2,8 +2,8 @@ package xurl.serial
 
 import scala.annotation.tailrec
 
-import cats.{ ApplicativeThrow, FlatMap }
 import cats.implicits._
+import cats.{ ApplicativeThrow, FlatMap }
 
 final case class BaseNPositive[F[_]: ApplicativeThrow: FlatMap](letters: String) extends BaseN[F] {
   import BaseNPositive._

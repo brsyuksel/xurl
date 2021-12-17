@@ -3,14 +3,11 @@ package xurl.url
 import java.time.LocalDateTime
 
 import cats.Show
-import io.estatico.newtype.macros.newtype
-import eu.timepit.refined.api.Refined
-import eu.timepit.refined.string.{ Url => RUrl }
-import eu.timepit.refined.collection.NonEmpty
 import derevo.cats.{ eqv, show }
-import derevo.derive
 import derevo.circe.magnolia.{ customizableEncoder, encoder }
+import derevo.derive
 import io.circe.magnolia.configured.{ Configuration => JsonConf }
+import io.estatico.newtype.macros.newtype
 
 object model {
   implicit val localDateTimeShow: Show[LocalDateTime] =

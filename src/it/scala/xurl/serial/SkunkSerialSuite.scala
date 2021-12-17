@@ -2,9 +2,8 @@ package xurl.serial
 
 import cats.effect._
 import cats.implicits._
-import skunk._
-import skunk.implicits._
 import natchez.Trace.Implicits.noop
+import skunk._
 import weaver.IOSuite
 
 object SkunkSerialSuite extends IOSuite {
