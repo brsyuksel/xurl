@@ -28,6 +28,17 @@ after running `sbt pack`, you will see there is an executable shell located in `
 
 ## endpoints
 
+- `GET /_health`
+
+Returns the statuses of storage and cache services. Example response:
+
+```json
+{
+    "storage": true,
+    "cache": true
+}
+```
+
 - `GET /api/v1/urls`
 
 Returns all stored urls in database. Example response:
