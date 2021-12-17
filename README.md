@@ -86,6 +86,6 @@ Redirects the user to associated url for a given code.
 - basen character uniqueness tests
 - better logging
 - tracing & metrics
-- healthcheck endpoint
+- ~~healthcheck endpoint~~
 - pagination
 - clear error messages
