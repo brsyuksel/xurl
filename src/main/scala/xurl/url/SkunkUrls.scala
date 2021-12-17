@@ -10,6 +10,7 @@ import xurl.url.model._
 
 final case class SkunkUrls[F[_]: Concurrent](pg: Resource[F, Session[F]]) extends Urls[F] {
   import SkunkUrls._
+
   override def list(offset: Int, limit: Int): F[List[Url]] =
     pg.use { s =>
       s.prepare(SQL.paginatedList).use { p =>

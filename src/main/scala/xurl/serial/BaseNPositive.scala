@@ -12,6 +12,7 @@ final case class BaseNPositive[F[_]: ApplicativeThrow: FlatMap](letters: String)
     (n >= 0).pure[F].ifM(ten2N(n).pure[F], NumberIsNotPositive.raiseError[F, String])
 
   private lazy val base: Long = letters.length
+
   private def ten2N(n: Long): String = {
     @tailrec
     def aux(r: Long, c: List[Int] = Nil): List[Int] =

@@ -19,10 +19,12 @@ object Routing {
       private def get(code: Code): F[Option[String]] =
         cache
           .through(code.value, urls.get(code).map(_.map(_.address.value)))
+
       def resolve(code: Code): F[Address] =
         (get(code) >>= { o =>
           MonadThrow[F].fromOption(o.map(Address(_)), RouteNotFoundError)
         }) <* urls.hit(code)
+
     }
 
   case class RoutingError(message: String) extends NoStackTrace

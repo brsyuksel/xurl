@@ -13,17 +13,15 @@ trait Shortener[F[_]] {
 }
 
 object Shortener {
-  def make[F[_]: MonadThrow](serial: SerialCode[F], urls: Urls[F]): Shortener[F] =
-    new Shortener[F] {
-      def shorten(address: Address): F[Url] =
-        for {
-          codeStr <- serial.next
-          u = Url(Code(codeStr), address)
-          code   <- urls.create(u)
-          objOpt <- urls.get(code)
-          obj    <- MonadThrow[F].fromOption(objOpt, NotStoredError)
-        } yield obj
-    }
+  def make[F[_]: MonadThrow](serialCode: SerialCode[F], urls: Urls[F]): Shortener[F] =
+    addr =>
+      for {
+        codeStr <- serialCode.next
+        u = Url(Code(codeStr), addr)
+        code   <- urls.create(u)
+        objOpt <- urls.get(code)
+        obj    <- MonadThrow[F].fromOption(objOpt, NotStoredError)
+      } yield obj
 
   case class ShortenerError(message: String) extends NoStackTrace
   object NotStoredError                      extends ShortenerError("url couldn't have been stored")

@@ -23,11 +23,13 @@ final case class UrlRoutes[F[_]: Concurrent: MonadThrow](urls: Urls[F], shortene
   private val httpRoutes: HttpRoutes[F] = HttpRoutes.of[F] {
     case GET -> Root :? OffsetMatcher(offset) +& LimitMatcher(limit) =>
       Ok(urls.list(offset.getOrElse(0), limit.getOrElse(10)))
+
     case GET -> Root / code =>
       urls.get(Code(code)).flatMap {
         case None    => NotFound()
         case Some(u) => Ok(u)
       }
+
     case req @ POST -> Root =>
       req.decode[AddressParam] { addr =>
         shortener
@@ -37,6 +39,7 @@ final case class UrlRoutes[F[_]: Concurrent: MonadThrow](urls: Urls[F], shortene
             InternalServerError()
           }
       }
+
   }
 
   val routes: HttpRoutes[F] = Router(

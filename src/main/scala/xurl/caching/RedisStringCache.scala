@@ -12,8 +12,10 @@ final case class RedisStringCache[F[_]: MonadThrow](
 ) extends Cache[F] {
   private def set(key: String, value: String): F[Unit] =
     redis.set(key, value) <* redis.expire(key, expiresIn = expiration)
+
   private def get(key: String): F[Option[String]] =
     redis.get(key)
+
   override def through(key: String, fk: => F[Option[String]]): F[Option[String]] =
     get(key) >>= {
       case None =>
