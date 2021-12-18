@@ -8,14 +8,14 @@ import weaver.IOSuite
 object SkunkHealthSuite extends IOSuite {
   type Res = Resource[IO, Session[IO]]
 
-  override def sharedResource: Resource[IO,Res] =
+  override def sharedResource: Resource[IO, Res] =
     Session.pooled[IO](
       host = "localhost",
-        port = 5432,
-        user = "postgres",
-        database = "xurl",
-        password = Some("postgres"),
-        max = 10
+      port = 5432,
+      user = "postgres",
+      database = "xurl",
+      password = Some("postgres"),
+      max = 10
     )
 
   test("ok returns true") { pg =>
