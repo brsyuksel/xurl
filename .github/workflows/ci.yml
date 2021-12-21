@@ -46,12 +46,10 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2
       
-      - name: install graalvm
-        uses: rinx/setup-graalvm-ce@v0.0.5
+      - name: install jdk
+        uses: joschi/setup-jdk@v2
         with:
-          graalvm-version: "20.2.0"
-          java-version: "java11"
-          native-image: "false"
+          java-version: '11'
       
       - name: xurl ci tests
         run: sbt ci
