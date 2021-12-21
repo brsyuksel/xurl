@@ -104,5 +104,5 @@ Redirects the user to associated url for a given code.
 - ~~healthcheck endpoint~~ [PR#2](https://github.com/brsyuksel/xurl/pull/2)
 - pagination
 - clear error messages
-- github actions for ci
+- ~~github actions for ci~~ [PR#9](https://github.com/brsyuksel/xurl/pull/9)
 - scala 3
