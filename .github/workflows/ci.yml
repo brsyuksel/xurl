@@ -7,6 +7,9 @@ on:
 jobs:
   ci-tests:
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/vscode/devcontainers/base:ubuntu
+      options: --user ${{ needs.configure.outputs.containerUser }}
     services:
       postgres:
         image: postgres:13-alpine
