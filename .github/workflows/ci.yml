@@ -51,6 +51,7 @@ jobs:
         with:
           graalvm-version: "20.2.0"
           java-version: "java11"
+          native-image: "false"
       
       - name: xurl ci tests
         run: sbt ci
