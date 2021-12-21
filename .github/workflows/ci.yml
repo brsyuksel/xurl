@@ -48,8 +48,8 @@ jobs:
         env:
           PGPASSWORD: postgres
         run: |
-          psql -U postgres -h localhost -d xurl -f ci/dll/01_serial.sql
-          psql -U postgres -h localhost -d xurl -f ci/dll/02_url_table.sql
+          psql -U postgres -h localhost -d xurl -f ci/ddl/01_serial.sql
+          psql -U postgres -h localhost -d xurl -f ci/ddl/02_url_table.sql
       
       - name: install jdk
         uses: joschi/setup-jdk@v2
