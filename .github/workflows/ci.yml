@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/vscode/devcontainers/base:ubuntu
-      options: --user ${{ needs.configure.outputs.containerUser }}
+      options: --user root
     services:
       postgres:
         image: postgres:13-alpine
