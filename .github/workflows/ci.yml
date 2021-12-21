@@ -1,0 +1,71 @@
+name: ci tests
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci-tests:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:13-alpine
+        env: 
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: xurl
+        ports: 
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis:6-alpine
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports: 
+          - 6379:6379
+    
+    steps:
+      - name: install postgresql-client-13
+        run:  |
+          sudo apt update
+          sudo apt -y install wget
+          wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+          echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" | sudo tee  /etc/apt/sources.list.d/pgdg.list
+          sudo apt update
+          sudo apt -y install postgresql-client-13
+
+      - name: checkout repo
+        uses: actions/checkout@v2
+
+      - name: initialize database
+        env:
+          PGPASSWORD: postgres
+        run: |
+          psql -U postgres -h localhost -d xurl -f ci/ddl/01_serial.sql
+          psql -U postgres -h localhost -d xurl -f ci/ddl/02_url_table.sql
+      
+      - name: install jdk
+        uses: joschi/setup-jdk@v2
+        with:
+          java-version: '11'
+
+      - name: install sbt
+        run: |
+          sudo apt-get update
+          sudo apt-get install apt-transport-https curl gnupg -yqq
+          echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
+          echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | sudo tee /etc/apt/sources.list.d/sbt_old.list
+          curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo -H gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/scalasbt-release.gpg --import
+          sudo chmod 644 /etc/apt/trusted.gpg.d/scalasbt-release.gpg
+          sudo apt-get update
+          sudo apt-get install sbt
+
+      - name: xurl ci tests
+        run: sbt ci
