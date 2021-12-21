@@ -10,26 +10,26 @@ jobs:
     container:
       image: mcr.microsoft.com/vscode/devcontainers/base:ubuntu
       options: --user root
-    services:
-      postgres:
-        image: postgres:13-alpine
-        env: 
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: xurl
-        ports: 
-          - 5432:5432
-        volumes:
-          - ${{github.workspace}}/ci/ddl:/docker-entrypoint-initdb.d
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+      services:
+        postgres:
+          image: postgres:13-alpine
+          env: 
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_DB: xurl
+          ports: 
+            - 5432:5432
+          volumes:
+            - ${{github.workspace}}/ci/ddl:/docker-entrypoint-initdb.d
+          options: >-
+            --health-cmd pg_isready
+            --health-interval 10s
+            --health-timeout 5s
+            --health-retries 5
 
-      redis:
-        image: redis:6-alpine
-        ports: 
-          - 6379:6379
+        redis:
+          image: redis:6-alpine
+          ports: 
+            - 6379:6379
     
     steps:
       - name: install sbt
