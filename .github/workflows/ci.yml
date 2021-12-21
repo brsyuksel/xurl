@@ -18,6 +18,7 @@ jobs:
         volumes:
           - ${{github.workspace}}/ci/ddl:/docker-entrypoint-initdb.d
         options: >-
+          --user 1001
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
