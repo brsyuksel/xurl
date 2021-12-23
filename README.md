@@ -98,6 +98,10 @@ Example Response:
 
 Redirects the user to associated url for a given code.
 
+- `GET /_prometheus/metrics`
+
+Exposes Prometheus-compatible JVM and server' metrics
+
 ## todo
 
 - basen character uniqueness tests
