@@ -13,9 +13,9 @@ trait HttpServer[F[_]] {
 }
 
 object HttpServer {
-  def make[F[_]: Async](conf: AppConfig, httpApp: HttpApp[F]): HttpServer[F] =
+  def make[F[_]: Async](conf: AppConfig, httpAppR: Resource[F, HttpApp[F]]): HttpServer[F] =
     new HttpServer[F] {
-      def server: Resource[F, Server] = {
+      def server: Resource[F, Server] = httpAppR.flatMap { httpApp =>
         EmberServerBuilder
           .default[F]
           .withHostOption(Host.fromString(conf.server.host))
