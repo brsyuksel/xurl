@@ -104,7 +104,7 @@ Exposes Prometheus-compatible JVM and server' metrics
 
 ## grafana dashboard
 
-you can access the grafana dashboard of the xurl instance by visiting `https://localhost:3000`.
+you can access the grafana dashboard of the xurl instance by visiting `http://localhost:3000`.
 
 the grafana' default credentials have been used so you can log in with **admin** for username and **admin** for password.
 
