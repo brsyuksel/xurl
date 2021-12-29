@@ -106,7 +106,8 @@ Exposes Prometheus-compatible JVM and server' metrics
 
 - basen character uniqueness tests
 - better logging
-- tracing ~~& metrics~~ [PR#13](https://github.com/brsyuksel/xurl/pull/13)
+- tracing
+- ~~metrics~~ [PR#13](https://github.com/brsyuksel/xurl/pull/13) [PR#17](https://github.com/brsyuksel/xurl/pull/17)
 - ~~healthcheck endpoint~~ [PR#2](https://github.com/brsyuksel/xurl/pull/2)
 - pagination
 - clear error messages

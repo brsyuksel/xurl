@@ -15,3 +15,20 @@ services:
     image: redis:6-alpine
     ports: 
       - 6379:6379
+
+  prometheus:
+    image: prom/prometheus:v2.32.1
+    volumes:
+      - ./ci/metrics/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  grafana:
+    image: grafana/grafana:8.3.3
+    ports:
+      - 3000:3000
+    volumes:
+      - ./ci/metrics/grafana/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+      - ./ci/metrics/grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
+      - ./ci/metrics/grafana/xurl-dashboard.json:/etc/grafana/provisioning/dashboards/xurl/xurl-dashboard.json
+    
