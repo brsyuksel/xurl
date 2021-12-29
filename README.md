@@ -102,6 +102,12 @@ Redirects the user to associated url for a given code.
 
 Exposes Prometheus-compatible JVM and server' metrics
 
+## grafana dashboard
+
+you can access the grafana dashboard of the xurl instance by visiting `https://localhost:3000`
+the grafana' default credentials has been used so you can log in with **admin** for username and **admin** for password.
+the dashboard name is `xurl`.
+
 ## todo
 
 - basen character uniqueness tests
