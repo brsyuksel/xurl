@@ -108,14 +108,14 @@ you can access the grafana dashboard of the xurl instance by visiting `http://lo
 
 the grafana' default credentials have been used so you can log in with **admin** for username and **admin** for password.
 
-the dashboard name is `xurl`.
+the dashboard name is `xurl`, you can also take a look community-driven `postgres` and `redis` dashboards to see metrics of them. 
 
 ## todo
 
 - basen character uniqueness tests
 - better logging
 - tracing
-- ~~metrics~~ [PR#13](https://github.com/brsyuksel/xurl/pull/13) [PR#17](https://github.com/brsyuksel/xurl/pull/17)
+- ~~metrics~~ [PR#13](https://github.com/brsyuksel/xurl/pull/13) [PR#17](https://github.com/brsyuksel/xurl/pull/17) [PR#18](https://github.com/brsyuksel/xurl/pull/18)
 - ~~healthcheck endpoint~~ [PR#2](https://github.com/brsyuksel/xurl/pull/2)
 - pagination
 - clear error messages

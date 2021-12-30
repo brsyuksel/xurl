@@ -21,7 +21,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -222,7 +221,7 @@
             "uid": "p9MdtWAnz"
           },
           "exemplar": true,
-          "expr": "process_resident_memory_bytes{} / 1024 / 1024",
+          "expr": "process_resident_memory_bytes{job=\"xurl_http\"} / 1024 / 1024",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -638,6 +637,6 @@
   "timezone": "",
   "title": "xurl",
   "uid": "sKElLWAnz",
-  "version": 12,
+  "version": 1,
   "weekStart": ""
 }
