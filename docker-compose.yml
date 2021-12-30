@@ -31,6 +31,8 @@ services:
       - ./ci/metrics/grafana/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
       - ./ci/metrics/grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
       - ./ci/metrics/grafana/xurl-dashboard.json:/etc/grafana/provisioning/dashboards/xurl/xurl-dashboard.json
+      - ./ci/metrics/grafana/postgres-dashboard.json:/etc/grafana/provisioning/dashboards/xurl/postgres-dashboard.json
+      - ./ci/metrics/grafana/redis-dashboard.json:/etc/grafana/provisioning/dashboards/xurl/redis-dashboard.json
   
   redis_exporter:
     image: oliver006/redis_exporter:v1.33.0-alpine
