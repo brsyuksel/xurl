@@ -31,4 +31,13 @@ services:
       - ./ci/metrics/grafana/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
       - ./ci/metrics/grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
       - ./ci/metrics/grafana/xurl-dashboard.json:/etc/grafana/provisioning/dashboards/xurl/xurl-dashboard.json
-    
+  
+  redis_exporter:
+    image: oliver006/redis_exporter:v1.33.0-alpine
+    environment:
+      REDIS_ADDR: redis://redis:6379
+
+  postgres_exporter:
+    image: prometheuscommunity/postgres-exporter:v0.10.0
+    environment:
+      DATA_SOURCE_NAME: postgresql://postgres:postgres@postgres:5432/xurl?sslmode=disable
