@@ -117,7 +117,7 @@ after building a docker image for the project by using a command like `docker bu
 docker run --rm --network host xurl:latest
 ```
 
->> graalvm native image causes a bug on the metrics endpoint that are used by prometheus, the relevant endpoint somehow returns 500 for requests.
+> graalvm native image causes a bug on the metrics endpoint that are used by prometheus, the relevant endpoint somehow returns 500 for requests.
 
 ## todo
 

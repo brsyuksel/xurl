@@ -1,10 +1,12 @@
 FROM ubuntu:20.04 AS builder
 
+ARG ARCH=amd64
+
 RUN apt-get update && \
     apt-get install -yqq wget build-essential libz-dev zlib1g-dev apt-transport-https curl gnupg
 
-RUN wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.0.0.2/graalvm-ce-java11-linux-amd64-22.0.0.2.tar.gz
-RUN tar zxvf graalvm-ce-java11-linux-amd64-22.0.0.2.tar.gz && \
+RUN wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.0.0.2/graalvm-ce-java11-linux-$ARCH-22.0.0.2.tar.gz
+RUN tar zxvf graalvm-ce-java11-linux-$ARCH-22.0.0.2.tar.gz && \
     mkdir -v /usr/lib/jvm && \
     mv -v graalvm-ce-java11-22.0.0.2/ /usr/lib/jvm && \
     update-alternatives --install /usr/bin/java java /usr/lib/jvm/graalvm-ce-java11-22.0.0.2/bin/java 0 && \
