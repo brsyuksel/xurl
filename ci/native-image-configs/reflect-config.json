@@ -1,0 +1,1179 @@
+[
+{
+  "name":"[B"
+},
+{
+  "name":"[C"
+},
+{
+  "name":"[D"
+},
+{
+  "name":"[F"
+},
+{
+  "name":"[I"
+},
+{
+  "name":"[J"
+},
+{
+  "name":"[Lcats.parse.Parser0;"
+},
+{
+  "name":"[Lcats.parse.Parser;"
+},
+{
+  "name":"[Lcats.parse.RadixNode;"
+},
+{
+  "name":"[Ljava.lang.StackTraceElement;"
+},
+{
+  "name":"[Ljava.lang.String;"
+},
+{
+  "name":"[Ljavax.management.openmbean.CompositeData;"
+},
+{
+  "name":"[Lscala.util.Either;"
+},
+{
+  "name":"[S"
+},
+{
+  "name":"[Z"
+},
+{
+  "name":"cats.effect.unsafe.metrics.ComputePoolSampler",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.ComputePoolSamplerMBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.LiveFiberSnapshotTrigger",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.LiveFiberSnapshotTriggerMBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.LocalQueueSampler",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"cats.effect.unsafe.metrics.LocalQueueSamplerMBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.GarbageCollectorMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.GcInfo",
+  "queryAllPublicMethods":true,
+  "fields":[
+    {"name":"builder"}, 
+    {"name":"extAttributes"}
+  ]
+},
+{
+  "name":"com.sun.management.HotSpotDiagnosticMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.OperatingSystemMXBean",
+  "methods":[{"name":"getProcessCpuTime","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.management.ThreadMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.UnixOperatingSystemMXBean",
+  "queryAllPublicMethods":true,
+  "methods":[
+    {"name":"getMaxFileDescriptorCount","parameterTypes":[] }, 
+    {"name":"getOpenFileDescriptorCount","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.sun.management.VMOption",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.sun.management.internal.GarbageCollectorExtImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"com.sun.management.internal.HotSpotDiagnostic",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"com.sun.management.internal.HotSpotThreadImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"com.sun.management.internal.OperatingSystemImpl",
+  "queryAllPublicConstructors":true,
+  "methods":[
+    {"name":"getMaxFileDescriptorCount","parameterTypes":[] }, 
+    {"name":"getOpenFileDescriptorCount","parameterTypes":[] }, 
+    {"name":"getProcessCpuTime","parameterTypes":[] }
+  ]
+},
+{
+  "name":"io.lettuce.core.AbstractRedisAsyncCommands",
+  "queriedMethods":[
+    {"name":"aclCat","parameterTypes":[] }, 
+    {"name":"aclCat","parameterTypes":["io.lettuce.core.AclCategory"] }, 
+    {"name":"aclDeluser","parameterTypes":["java.lang.String[]"] }, 
+    {"name":"aclGenpass","parameterTypes":[] }, 
+    {"name":"aclGenpass","parameterTypes":["int"] }, 
+    {"name":"aclGetuser","parameterTypes":["java.lang.String"] }, 
+    {"name":"aclList","parameterTypes":[] }, 
+    {"name":"aclLoad","parameterTypes":[] }, 
+    {"name":"aclLog","parameterTypes":[] }, 
+    {"name":"aclLog","parameterTypes":["int"] }, 
+    {"name":"aclLogReset","parameterTypes":[] }, 
+    {"name":"aclSave","parameterTypes":[] }, 
+    {"name":"aclSetuser","parameterTypes":["java.lang.String","io.lettuce.core.AclSetuserArgs"] }, 
+    {"name":"aclUsers","parameterTypes":[] }, 
+    {"name":"aclWhoami","parameterTypes":[] }, 
+    {"name":"append","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"asking","parameterTypes":[] }, 
+    {"name":"auth","parameterTypes":["java.lang.CharSequence"] }, 
+    {"name":"auth","parameterTypes":["java.lang.String","java.lang.CharSequence"] }, 
+    {"name":"bgrewriteaof","parameterTypes":[] }, 
+    {"name":"bgsave","parameterTypes":[] }, 
+    {"name":"bitcount","parameterTypes":["java.lang.Object"] }, 
+    {"name":"bitcount","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"bitfield","parameterTypes":["java.lang.Object","io.lettuce.core.BitFieldArgs"] }, 
+    {"name":"bitopAnd","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"bitopNot","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"bitopOr","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"bitopXor","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"bitpos","parameterTypes":["java.lang.Object","boolean"] }, 
+    {"name":"bitpos","parameterTypes":["java.lang.Object","boolean","long"] }, 
+    {"name":"bitpos","parameterTypes":["java.lang.Object","boolean","long","long"] }, 
+    {"name":"blmove","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.LMoveArgs","double"] }, 
+    {"name":"blmove","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.LMoveArgs","long"] }, 
+    {"name":"blpop","parameterTypes":["double","java.lang.Object[]"] }, 
+    {"name":"blpop","parameterTypes":["long","java.lang.Object[]"] }, 
+    {"name":"brpop","parameterTypes":["double","java.lang.Object[]"] }, 
+    {"name":"brpop","parameterTypes":["long","java.lang.Object[]"] }, 
+    {"name":"brpoplpush","parameterTypes":["double","java.lang.Object","java.lang.Object"] }, 
+    {"name":"brpoplpush","parameterTypes":["long","java.lang.Object","java.lang.Object"] }, 
+    {"name":"bzpopmax","parameterTypes":["double","java.lang.Object[]"] }, 
+    {"name":"bzpopmax","parameterTypes":["long","java.lang.Object[]"] }, 
+    {"name":"bzpopmin","parameterTypes":["double","java.lang.Object[]"] }, 
+    {"name":"bzpopmin","parameterTypes":["long","java.lang.Object[]"] }, 
+    {"name":"clientCaching","parameterTypes":["boolean"] }, 
+    {"name":"clientGetname","parameterTypes":[] }, 
+    {"name":"clientGetredir","parameterTypes":[] }, 
+    {"name":"clientId","parameterTypes":[] }, 
+    {"name":"clientKill","parameterTypes":["io.lettuce.core.KillArgs"] }, 
+    {"name":"clientKill","parameterTypes":["java.lang.String"] }, 
+    {"name":"clientList","parameterTypes":[] }, 
+    {"name":"clientPause","parameterTypes":["long"] }, 
+    {"name":"clientSetname","parameterTypes":["java.lang.Object"] }, 
+    {"name":"clientTracking","parameterTypes":["io.lettuce.core.TrackingArgs"] }, 
+    {"name":"clientUnblock","parameterTypes":["long","io.lettuce.core.UnblockType"] }, 
+    {"name":"clusterAddSlots","parameterTypes":["int[]"] }, 
+    {"name":"clusterBumpepoch","parameterTypes":[] }, 
+    {"name":"clusterCountFailureReports","parameterTypes":["java.lang.String"] }, 
+    {"name":"clusterCountKeysInSlot","parameterTypes":["int"] }, 
+    {"name":"clusterDelSlots","parameterTypes":["int[]"] }, 
+    {"name":"clusterFailover","parameterTypes":["boolean"] }, 
+    {"name":"clusterFlushslots","parameterTypes":[] }, 
+    {"name":"clusterForget","parameterTypes":["java.lang.String"] }, 
+    {"name":"clusterGetKeysInSlot","parameterTypes":["int","int"] }, 
+    {"name":"clusterInfo","parameterTypes":[] }, 
+    {"name":"clusterKeyslot","parameterTypes":["java.lang.Object"] }, 
+    {"name":"clusterMeet","parameterTypes":["java.lang.String","int"] }, 
+    {"name":"clusterMyId","parameterTypes":[] }, 
+    {"name":"clusterNodes","parameterTypes":[] }, 
+    {"name":"clusterReplicate","parameterTypes":["java.lang.String"] }, 
+    {"name":"clusterReset","parameterTypes":["boolean"] }, 
+    {"name":"clusterSaveconfig","parameterTypes":[] }, 
+    {"name":"clusterSetConfigEpoch","parameterTypes":["long"] }, 
+    {"name":"clusterSetSlotImporting","parameterTypes":["int","java.lang.String"] }, 
+    {"name":"clusterSetSlotMigrating","parameterTypes":["int","java.lang.String"] }, 
+    {"name":"clusterSetSlotNode","parameterTypes":["int","java.lang.String"] }, 
+    {"name":"clusterSetSlotStable","parameterTypes":["int"] }, 
+    {"name":"clusterSlaves","parameterTypes":["java.lang.String"] }, 
+    {"name":"clusterSlots","parameterTypes":[] }, 
+    {"name":"command","parameterTypes":[] }, 
+    {"name":"commandCount","parameterTypes":[] }, 
+    {"name":"commandInfo","parameterTypes":["io.lettuce.core.protocol.CommandType[]"] }, 
+    {"name":"commandInfo","parameterTypes":["java.lang.String[]"] }, 
+    {"name":"configGet","parameterTypes":["java.lang.String"] }, 
+    {"name":"configResetstat","parameterTypes":[] }, 
+    {"name":"configRewrite","parameterTypes":[] }, 
+    {"name":"configSet","parameterTypes":["java.lang.String","java.lang.String"] }, 
+    {"name":"copy","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"copy","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.CopyArgs"] }, 
+    {"name":"dbsize","parameterTypes":[] }, 
+    {"name":"debugCrashAndRecover","parameterTypes":["java.lang.Long"] }, 
+    {"name":"debugHtstats","parameterTypes":["int"] }, 
+    {"name":"debugObject","parameterTypes":["java.lang.Object"] }, 
+    {"name":"debugOom","parameterTypes":[] }, 
+    {"name":"debugReload","parameterTypes":[] }, 
+    {"name":"debugRestart","parameterTypes":["java.lang.Long"] }, 
+    {"name":"debugSdslen","parameterTypes":["java.lang.Object"] }, 
+    {"name":"debugSegfault","parameterTypes":[] }, 
+    {"name":"decr","parameterTypes":["java.lang.Object"] }, 
+    {"name":"decrby","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"del","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"digest","parameterTypes":["java.lang.String"] }, 
+    {"name":"digest","parameterTypes":["byte[]"] }, 
+    {"name":"discard","parameterTypes":[] }, 
+    {"name":"dispatch","parameterTypes":["io.lettuce.core.protocol.ProtocolKeyword","io.lettuce.core.output.CommandOutput"] }, 
+    {"name":"dispatch","parameterTypes":["io.lettuce.core.protocol.ProtocolKeyword","io.lettuce.core.output.CommandOutput","io.lettuce.core.protocol.CommandArgs"] }, 
+    {"name":"dump","parameterTypes":["java.lang.Object"] }, 
+    {"name":"echo","parameterTypes":["java.lang.Object"] }, 
+    {"name":"eval","parameterTypes":["java.lang.String","io.lettuce.core.ScriptOutputType","java.lang.Object[]"] }, 
+    {"name":"eval","parameterTypes":["java.lang.String","io.lettuce.core.ScriptOutputType","java.lang.Object[]","java.lang.Object[]"] }, 
+    {"name":"eval","parameterTypes":["byte[]","io.lettuce.core.ScriptOutputType","java.lang.Object[]"] }, 
+    {"name":"eval","parameterTypes":["byte[]","io.lettuce.core.ScriptOutputType","java.lang.Object[]","java.lang.Object[]"] }, 
+    {"name":"evalsha","parameterTypes":["java.lang.String","io.lettuce.core.ScriptOutputType","java.lang.Object[]"] }, 
+    {"name":"evalsha","parameterTypes":["java.lang.String","io.lettuce.core.ScriptOutputType","java.lang.Object[]","java.lang.Object[]"] }, 
+    {"name":"exec","parameterTypes":[] }, 
+    {"name":"exists","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"expire","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"expire","parameterTypes":["java.lang.Object","java.time.Duration"] }, 
+    {"name":"expireat","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"expireat","parameterTypes":["java.lang.Object","java.time.Instant"] }, 
+    {"name":"expireat","parameterTypes":["java.lang.Object","java.util.Date"] }, 
+    {"name":"flushall","parameterTypes":[] }, 
+    {"name":"flushall","parameterTypes":["io.lettuce.core.FlushMode"] }, 
+    {"name":"flushallAsync","parameterTypes":[] }, 
+    {"name":"flushdb","parameterTypes":[] }, 
+    {"name":"flushdb","parameterTypes":["io.lettuce.core.FlushMode"] }, 
+    {"name":"flushdbAsync","parameterTypes":[] }, 
+    {"name":"geoadd","parameterTypes":["java.lang.Object","double","double","java.lang.Object"] }, 
+    {"name":"geoadd","parameterTypes":["java.lang.Object","double","double","java.lang.Object","io.lettuce.core.GeoAddArgs"] }, 
+    {"name":"geoadd","parameterTypes":["java.lang.Object","io.lettuce.core.GeoAddArgs","io.lettuce.core.GeoValue[]"] }, 
+    {"name":"geoadd","parameterTypes":["java.lang.Object","io.lettuce.core.GeoAddArgs","java.lang.Object[]"] }, 
+    {"name":"geoadd","parameterTypes":["java.lang.Object","io.lettuce.core.GeoValue[]"] }, 
+    {"name":"geoadd","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"geodist","parameterTypes":["java.lang.Object","java.lang.Object","java.lang.Object","io.lettuce.core.GeoArgs$Unit"] }, 
+    {"name":"geohash","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"geopos","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"georadius","parameterTypes":["java.lang.Object","double","double","double","io.lettuce.core.GeoArgs$Unit"] }, 
+    {"name":"georadius","parameterTypes":["java.lang.Object","double","double","double","io.lettuce.core.GeoArgs$Unit","io.lettuce.core.GeoArgs"] }, 
+    {"name":"georadius","parameterTypes":["java.lang.Object","double","double","double","io.lettuce.core.GeoArgs$Unit","io.lettuce.core.GeoRadiusStoreArgs"] }, 
+    {"name":"georadiusbymember","parameterTypes":["java.lang.Object","java.lang.Object","double","io.lettuce.core.GeoArgs$Unit"] }, 
+    {"name":"georadiusbymember","parameterTypes":["java.lang.Object","java.lang.Object","double","io.lettuce.core.GeoArgs$Unit","io.lettuce.core.GeoArgs"] }, 
+    {"name":"georadiusbymember","parameterTypes":["java.lang.Object","java.lang.Object","double","io.lettuce.core.GeoArgs$Unit","io.lettuce.core.GeoRadiusStoreArgs"] }, 
+    {"name":"geosearch","parameterTypes":["java.lang.Object","io.lettuce.core.GeoSearch$GeoRef","io.lettuce.core.GeoSearch$GeoPredicate"] }, 
+    {"name":"geosearch","parameterTypes":["java.lang.Object","io.lettuce.core.GeoSearch$GeoRef","io.lettuce.core.GeoSearch$GeoPredicate","io.lettuce.core.GeoArgs"] }, 
+    {"name":"geosearchstore","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.GeoSearch$GeoRef","io.lettuce.core.GeoSearch$GeoPredicate","io.lettuce.core.GeoArgs","boolean"] }, 
+    {"name":"get","parameterTypes":["java.lang.Object"] }, 
+    {"name":"getbit","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"getdel","parameterTypes":["java.lang.Object"] }, 
+    {"name":"getex","parameterTypes":["java.lang.Object","io.lettuce.core.GetExArgs"] }, 
+    {"name":"getrange","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"getset","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"hdel","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"hexists","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"hget","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"hgetall","parameterTypes":["io.lettuce.core.output.KeyValueStreamingChannel","java.lang.Object"] }, 
+    {"name":"hgetall","parameterTypes":["java.lang.Object"] }, 
+    {"name":"hincrby","parameterTypes":["java.lang.Object","java.lang.Object","long"] }, 
+    {"name":"hincrbyfloat","parameterTypes":["java.lang.Object","java.lang.Object","double"] }, 
+    {"name":"hkeys","parameterTypes":["io.lettuce.core.output.KeyStreamingChannel","java.lang.Object"] }, 
+    {"name":"hkeys","parameterTypes":["java.lang.Object"] }, 
+    {"name":"hlen","parameterTypes":["java.lang.Object"] }, 
+    {"name":"hmget","parameterTypes":["io.lettuce.core.output.KeyValueStreamingChannel","java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"hmget","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"hmset","parameterTypes":["java.lang.Object","java.util.Map"] }, 
+    {"name":"hrandfield","parameterTypes":["java.lang.Object"] }, 
+    {"name":"hrandfield","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"hrandfieldWithvalues","parameterTypes":["java.lang.Object"] }, 
+    {"name":"hrandfieldWithvalues","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"hscan","parameterTypes":["io.lettuce.core.output.KeyValueStreamingChannel","java.lang.Object"] }, 
+    {"name":"hscan","parameterTypes":["io.lettuce.core.output.KeyValueStreamingChannel","java.lang.Object","io.lettuce.core.ScanArgs"] }, 
+    {"name":"hscan","parameterTypes":["io.lettuce.core.output.KeyValueStreamingChannel","java.lang.Object","io.lettuce.core.ScanCursor"] }, 
+    {"name":"hscan","parameterTypes":["io.lettuce.core.output.KeyValueStreamingChannel","java.lang.Object","io.lettuce.core.ScanCursor","io.lettuce.core.ScanArgs"] }, 
+    {"name":"hscan","parameterTypes":["java.lang.Object"] }, 
+    {"name":"hscan","parameterTypes":["java.lang.Object","io.lettuce.core.ScanArgs"] }, 
+    {"name":"hscan","parameterTypes":["java.lang.Object","io.lettuce.core.ScanCursor"] }, 
+    {"name":"hscan","parameterTypes":["java.lang.Object","io.lettuce.core.ScanCursor","io.lettuce.core.ScanArgs"] }, 
+    {"name":"hset","parameterTypes":["java.lang.Object","java.lang.Object","java.lang.Object"] }, 
+    {"name":"hset","parameterTypes":["java.lang.Object","java.util.Map"] }, 
+    {"name":"hsetnx","parameterTypes":["java.lang.Object","java.lang.Object","java.lang.Object"] }, 
+    {"name":"hstrlen","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"hvals","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object"] }, 
+    {"name":"hvals","parameterTypes":["java.lang.Object"] }, 
+    {"name":"incr","parameterTypes":["java.lang.Object"] }, 
+    {"name":"incrby","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"incrbyfloat","parameterTypes":["java.lang.Object","double"] }, 
+    {"name":"info","parameterTypes":[] }, 
+    {"name":"info","parameterTypes":["java.lang.String"] }, 
+    {"name":"isOpen","parameterTypes":[] }, 
+    {"name":"keys","parameterTypes":["io.lettuce.core.output.KeyStreamingChannel","java.lang.Object"] }, 
+    {"name":"keys","parameterTypes":["java.lang.Object"] }, 
+    {"name":"lastsave","parameterTypes":[] }, 
+    {"name":"lindex","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"linsert","parameterTypes":["java.lang.Object","boolean","java.lang.Object","java.lang.Object"] }, 
+    {"name":"llen","parameterTypes":["java.lang.Object"] }, 
+    {"name":"lmove","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.LMoveArgs"] }, 
+    {"name":"lpop","parameterTypes":["java.lang.Object"] }, 
+    {"name":"lpop","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"lpos","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"lpos","parameterTypes":["java.lang.Object","java.lang.Object","int"] }, 
+    {"name":"lpos","parameterTypes":["java.lang.Object","java.lang.Object","int","io.lettuce.core.LPosArgs"] }, 
+    {"name":"lpos","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.LPosArgs"] }, 
+    {"name":"lpush","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"lpushx","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"lrange","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","long","long"] }, 
+    {"name":"lrange","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"lrem","parameterTypes":["java.lang.Object","long","java.lang.Object"] }, 
+    {"name":"lset","parameterTypes":["java.lang.Object","long","java.lang.Object"] }, 
+    {"name":"ltrim","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"memoryUsage","parameterTypes":["java.lang.Object"] }, 
+    {"name":"mget","parameterTypes":["io.lettuce.core.output.KeyValueStreamingChannel","java.lang.Object[]"] }, 
+    {"name":"mget","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"migrate","parameterTypes":["java.lang.String","int","int","long","io.lettuce.core.MigrateArgs"] }, 
+    {"name":"migrate","parameterTypes":["java.lang.String","int","java.lang.Object","int","long"] }, 
+    {"name":"move","parameterTypes":["java.lang.Object","int"] }, 
+    {"name":"mset","parameterTypes":["java.util.Map"] }, 
+    {"name":"msetnx","parameterTypes":["java.util.Map"] }, 
+    {"name":"multi","parameterTypes":[] }, 
+    {"name":"objectEncoding","parameterTypes":["java.lang.Object"] }, 
+    {"name":"objectFreq","parameterTypes":["java.lang.Object"] }, 
+    {"name":"objectIdletime","parameterTypes":["java.lang.Object"] }, 
+    {"name":"objectRefcount","parameterTypes":["java.lang.Object"] }, 
+    {"name":"persist","parameterTypes":["java.lang.Object"] }, 
+    {"name":"pexpire","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"pexpire","parameterTypes":["java.lang.Object","java.time.Duration"] }, 
+    {"name":"pexpireat","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"pexpireat","parameterTypes":["java.lang.Object","java.time.Instant"] }, 
+    {"name":"pexpireat","parameterTypes":["java.lang.Object","java.util.Date"] }, 
+    {"name":"pfadd","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"pfcount","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"pfmerge","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"ping","parameterTypes":[] }, 
+    {"name":"psetex","parameterTypes":["java.lang.Object","long","java.lang.Object"] }, 
+    {"name":"pttl","parameterTypes":["java.lang.Object"] }, 
+    {"name":"publish","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"pubsubChannels","parameterTypes":[] }, 
+    {"name":"pubsubChannels","parameterTypes":["java.lang.Object"] }, 
+    {"name":"pubsubNumpat","parameterTypes":[] }, 
+    {"name":"pubsubNumsub","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"quit","parameterTypes":[] }, 
+    {"name":"randomkey","parameterTypes":[] }, 
+    {"name":"readOnly","parameterTypes":[] }, 
+    {"name":"readWrite","parameterTypes":[] }, 
+    {"name":"rename","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"renamenx","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"reset","parameterTypes":[] }, 
+    {"name":"restore","parameterTypes":["java.lang.Object","long","byte[]"] }, 
+    {"name":"restore","parameterTypes":["java.lang.Object","byte[]","io.lettuce.core.RestoreArgs"] }, 
+    {"name":"role","parameterTypes":[] }, 
+    {"name":"rpop","parameterTypes":["java.lang.Object"] }, 
+    {"name":"rpop","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"rpoplpush","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"rpush","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"rpushx","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"sadd","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"save","parameterTypes":[] }, 
+    {"name":"scan","parameterTypes":[] }, 
+    {"name":"scan","parameterTypes":["io.lettuce.core.ScanArgs"] }, 
+    {"name":"scan","parameterTypes":["io.lettuce.core.ScanCursor"] }, 
+    {"name":"scan","parameterTypes":["io.lettuce.core.ScanCursor","io.lettuce.core.ScanArgs"] }, 
+    {"name":"scan","parameterTypes":["io.lettuce.core.output.KeyStreamingChannel"] }, 
+    {"name":"scan","parameterTypes":["io.lettuce.core.output.KeyStreamingChannel","io.lettuce.core.ScanArgs"] }, 
+    {"name":"scan","parameterTypes":["io.lettuce.core.output.KeyStreamingChannel","io.lettuce.core.ScanCursor"] }, 
+    {"name":"scan","parameterTypes":["io.lettuce.core.output.KeyStreamingChannel","io.lettuce.core.ScanCursor","io.lettuce.core.ScanArgs"] }, 
+    {"name":"scard","parameterTypes":["java.lang.Object"] }, 
+    {"name":"scriptExists","parameterTypes":["java.lang.String[]"] }, 
+    {"name":"scriptFlush","parameterTypes":[] }, 
+    {"name":"scriptFlush","parameterTypes":["io.lettuce.core.FlushMode"] }, 
+    {"name":"scriptKill","parameterTypes":[] }, 
+    {"name":"scriptLoad","parameterTypes":["java.lang.String"] }, 
+    {"name":"scriptLoad","parameterTypes":["byte[]"] }, 
+    {"name":"sdiff","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object[]"] }, 
+    {"name":"sdiff","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"sdiffstore","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"select","parameterTypes":["int"] }, 
+    {"name":"set","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"set","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.SetArgs"] }, 
+    {"name":"setGet","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"setGet","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.SetArgs"] }, 
+    {"name":"setTimeout","parameterTypes":["java.time.Duration"] }, 
+    {"name":"setbit","parameterTypes":["java.lang.Object","long","int"] }, 
+    {"name":"setex","parameterTypes":["java.lang.Object","long","java.lang.Object"] }, 
+    {"name":"setnx","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"setrange","parameterTypes":["java.lang.Object","long","java.lang.Object"] }, 
+    {"name":"shutdown","parameterTypes":["boolean"] }, 
+    {"name":"sinter","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object[]"] }, 
+    {"name":"sinter","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"sinterstore","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"sismember","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"slaveof","parameterTypes":["java.lang.String","int"] }, 
+    {"name":"slaveofNoOne","parameterTypes":[] }, 
+    {"name":"slowlogGet","parameterTypes":[] }, 
+    {"name":"slowlogGet","parameterTypes":["int"] }, 
+    {"name":"slowlogLen","parameterTypes":[] }, 
+    {"name":"slowlogReset","parameterTypes":[] }, 
+    {"name":"smembers","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object"] }, 
+    {"name":"smembers","parameterTypes":["java.lang.Object"] }, 
+    {"name":"smismember","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"smove","parameterTypes":["java.lang.Object","java.lang.Object","java.lang.Object"] }, 
+    {"name":"sort","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object"] }, 
+    {"name":"sort","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","io.lettuce.core.SortArgs"] }, 
+    {"name":"sort","parameterTypes":["java.lang.Object"] }, 
+    {"name":"sort","parameterTypes":["java.lang.Object","io.lettuce.core.SortArgs"] }, 
+    {"name":"sortStore","parameterTypes":["java.lang.Object","io.lettuce.core.SortArgs","java.lang.Object"] }, 
+    {"name":"spop","parameterTypes":["java.lang.Object"] }, 
+    {"name":"spop","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"srandmember","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","long"] }, 
+    {"name":"srandmember","parameterTypes":["java.lang.Object"] }, 
+    {"name":"srandmember","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"srem","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"sscan","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object"] }, 
+    {"name":"sscan","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","io.lettuce.core.ScanArgs"] }, 
+    {"name":"sscan","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","io.lettuce.core.ScanCursor"] }, 
+    {"name":"sscan","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","io.lettuce.core.ScanCursor","io.lettuce.core.ScanArgs"] }, 
+    {"name":"sscan","parameterTypes":["java.lang.Object"] }, 
+    {"name":"sscan","parameterTypes":["java.lang.Object","io.lettuce.core.ScanArgs"] }, 
+    {"name":"sscan","parameterTypes":["java.lang.Object","io.lettuce.core.ScanCursor"] }, 
+    {"name":"sscan","parameterTypes":["java.lang.Object","io.lettuce.core.ScanCursor","io.lettuce.core.ScanArgs"] }, 
+    {"name":"stralgoLcs","parameterTypes":["io.lettuce.core.StrAlgoArgs"] }, 
+    {"name":"strlen","parameterTypes":["java.lang.Object"] }, 
+    {"name":"sunion","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object[]"] }, 
+    {"name":"sunion","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"sunionstore","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"swapdb","parameterTypes":["int","int"] }, 
+    {"name":"time","parameterTypes":[] }, 
+    {"name":"touch","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"ttl","parameterTypes":["java.lang.Object"] }, 
+    {"name":"type","parameterTypes":["java.lang.Object"] }, 
+    {"name":"unlink","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"unwatch","parameterTypes":[] }, 
+    {"name":"waitForReplication","parameterTypes":["int","long"] }, 
+    {"name":"watch","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"xack","parameterTypes":["java.lang.Object","java.lang.Object","java.lang.String[]"] }, 
+    {"name":"xadd","parameterTypes":["java.lang.Object","io.lettuce.core.XAddArgs","java.util.Map"] }, 
+    {"name":"xadd","parameterTypes":["java.lang.Object","io.lettuce.core.XAddArgs","java.lang.Object[]"] }, 
+    {"name":"xadd","parameterTypes":["java.lang.Object","java.util.Map"] }, 
+    {"name":"xadd","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"xautoclaim","parameterTypes":["java.lang.Object","io.lettuce.core.XAutoClaimArgs"] }, 
+    {"name":"xclaim","parameterTypes":["java.lang.Object","io.lettuce.core.Consumer","long","java.lang.String[]"] }, 
+    {"name":"xclaim","parameterTypes":["java.lang.Object","io.lettuce.core.Consumer","io.lettuce.core.XClaimArgs","java.lang.String[]"] }, 
+    {"name":"xdel","parameterTypes":["java.lang.Object","java.lang.String[]"] }, 
+    {"name":"xgroupCreate","parameterTypes":["io.lettuce.core.XReadArgs$StreamOffset","java.lang.Object"] }, 
+    {"name":"xgroupCreate","parameterTypes":["io.lettuce.core.XReadArgs$StreamOffset","java.lang.Object","io.lettuce.core.XGroupCreateArgs"] }, 
+    {"name":"xgroupCreateconsumer","parameterTypes":["java.lang.Object","io.lettuce.core.Consumer"] }, 
+    {"name":"xgroupDelconsumer","parameterTypes":["java.lang.Object","io.lettuce.core.Consumer"] }, 
+    {"name":"xgroupDestroy","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"xgroupSetid","parameterTypes":["io.lettuce.core.XReadArgs$StreamOffset","java.lang.Object"] }, 
+    {"name":"xinfoConsumers","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"xinfoGroups","parameterTypes":["java.lang.Object"] }, 
+    {"name":"xinfoStream","parameterTypes":["java.lang.Object"] }, 
+    {"name":"xlen","parameterTypes":["java.lang.Object"] }, 
+    {"name":"xpending","parameterTypes":["java.lang.Object","io.lettuce.core.Consumer","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"xpending","parameterTypes":["java.lang.Object","io.lettuce.core.XPendingArgs"] }, 
+    {"name":"xpending","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"xpending","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"xrange","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"xrange","parameterTypes":["java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"xread","parameterTypes":["io.lettuce.core.XReadArgs","io.lettuce.core.XReadArgs$StreamOffset[]"] }, 
+    {"name":"xread","parameterTypes":["io.lettuce.core.XReadArgs$StreamOffset[]"] }, 
+    {"name":"xreadgroup","parameterTypes":["io.lettuce.core.Consumer","io.lettuce.core.XReadArgs","io.lettuce.core.XReadArgs$StreamOffset[]"] }, 
+    {"name":"xreadgroup","parameterTypes":["io.lettuce.core.Consumer","io.lettuce.core.XReadArgs$StreamOffset[]"] }, 
+    {"name":"xrevrange","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"xrevrange","parameterTypes":["java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"xtrim","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"xtrim","parameterTypes":["java.lang.Object","io.lettuce.core.XTrimArgs"] }, 
+    {"name":"xtrim","parameterTypes":["java.lang.Object","boolean","long"] }, 
+    {"name":"zadd","parameterTypes":["java.lang.Object","double","java.lang.Object"] }, 
+    {"name":"zadd","parameterTypes":["java.lang.Object","io.lettuce.core.ZAddArgs","double","java.lang.Object"] }, 
+    {"name":"zadd","parameterTypes":["java.lang.Object","io.lettuce.core.ZAddArgs","io.lettuce.core.ScoredValue[]"] }, 
+    {"name":"zadd","parameterTypes":["java.lang.Object","io.lettuce.core.ZAddArgs","java.lang.Object[]"] }, 
+    {"name":"zadd","parameterTypes":["java.lang.Object","io.lettuce.core.ScoredValue[]"] }, 
+    {"name":"zadd","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"zaddincr","parameterTypes":["java.lang.Object","double","java.lang.Object"] }, 
+    {"name":"zaddincr","parameterTypes":["java.lang.Object","io.lettuce.core.ZAddArgs","double","java.lang.Object"] }, 
+    {"name":"zcard","parameterTypes":["java.lang.Object"] }, 
+    {"name":"zcount","parameterTypes":["java.lang.Object","double","double"] }, 
+    {"name":"zcount","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zcount","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zdiff","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"zdiffWithScores","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"zdiffstore","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"zincrby","parameterTypes":["java.lang.Object","double","java.lang.Object"] }, 
+    {"name":"zinter","parameterTypes":["io.lettuce.core.ZAggregateArgs","java.lang.Object[]"] }, 
+    {"name":"zinter","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"zinterWithScores","parameterTypes":["io.lettuce.core.ZAggregateArgs","java.lang.Object[]"] }, 
+    {"name":"zinterWithScores","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"zinterstore","parameterTypes":["java.lang.Object","io.lettuce.core.ZStoreArgs","java.lang.Object[]"] }, 
+    {"name":"zinterstore","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"zlexcount","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zlexcount","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zmscore","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"zpopmax","parameterTypes":["java.lang.Object"] }, 
+    {"name":"zpopmax","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"zpopmin","parameterTypes":["java.lang.Object"] }, 
+    {"name":"zpopmin","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"zrandmember","parameterTypes":["java.lang.Object"] }, 
+    {"name":"zrandmember","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"zrandmemberWithScores","parameterTypes":["java.lang.Object"] }, 
+    {"name":"zrandmemberWithScores","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"zrange","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","long","long"] }, 
+    {"name":"zrange","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"zrangeWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","long","long"] }, 
+    {"name":"zrangeWithScores","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"zrangebylex","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrangebylex","parameterTypes":["java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrangebylex","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrangebylex","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String","long","long"] }, 
+    {"name":"zrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","double","double"] }, 
+    {"name":"zrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","double","double","long","long"] }, 
+    {"name":"zrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","java.lang.String","java.lang.String","long","long"] }, 
+    {"name":"zrangebyscore","parameterTypes":["java.lang.Object","double","double"] }, 
+    {"name":"zrangebyscore","parameterTypes":["java.lang.Object","double","double","long","long"] }, 
+    {"name":"zrangebyscore","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrangebyscore","parameterTypes":["java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrangebyscore","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrangebyscore","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String","long","long"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","double","double"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","double","double","long","long"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","java.lang.String","java.lang.String","long","long"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["java.lang.Object","double","double"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["java.lang.Object","double","double","long","long"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrangebyscoreWithScores","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String","long","long"] }, 
+    {"name":"zrangestorebylex","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrangestorebyscore","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrank","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"zrem","parameterTypes":["java.lang.Object","java.lang.Object[]"] }, 
+    {"name":"zremrangebylex","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zremrangebylex","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zremrangebyrank","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"zremrangebyscore","parameterTypes":["java.lang.Object","double","double"] }, 
+    {"name":"zremrangebyscore","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zremrangebyscore","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrevrange","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","long","long"] }, 
+    {"name":"zrevrange","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"zrevrangeWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","long","long"] }, 
+    {"name":"zrevrangeWithScores","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"zrevrangebylex","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrevrangebylex","parameterTypes":["java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","double","double"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","double","double","long","long"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["io.lettuce.core.output.ValueStreamingChannel","java.lang.Object","java.lang.String","java.lang.String","long","long"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["java.lang.Object","double","double"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["java.lang.Object","double","double","long","long"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrevrangebyscore","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String","long","long"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","double","double"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","double","double","long","long"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","java.lang.String","java.lang.String","long","long"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["java.lang.Object","double","double"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["java.lang.Object","double","double","long","long"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["java.lang.Object","io.lettuce.core.Range"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String"] }, 
+    {"name":"zrevrangebyscoreWithScores","parameterTypes":["java.lang.Object","java.lang.String","java.lang.String","long","long"] }, 
+    {"name":"zrevrangestorebylex","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrevrangestorebyscore","parameterTypes":["java.lang.Object","java.lang.Object","io.lettuce.core.Range","io.lettuce.core.Limit"] }, 
+    {"name":"zrevrank","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"zscan","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object"] }, 
+    {"name":"zscan","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","io.lettuce.core.ScanArgs"] }, 
+    {"name":"zscan","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","io.lettuce.core.ScanCursor"] }, 
+    {"name":"zscan","parameterTypes":["io.lettuce.core.output.ScoredValueStreamingChannel","java.lang.Object","io.lettuce.core.ScanCursor","io.lettuce.core.ScanArgs"] }, 
+    {"name":"zscan","parameterTypes":["java.lang.Object"] }, 
+    {"name":"zscan","parameterTypes":["java.lang.Object","io.lettuce.core.ScanArgs"] }, 
+    {"name":"zscan","parameterTypes":["java.lang.Object","io.lettuce.core.ScanCursor"] }, 
+    {"name":"zscan","parameterTypes":["java.lang.Object","io.lettuce.core.ScanCursor","io.lettuce.core.ScanArgs"] }, 
+    {"name":"zscore","parameterTypes":["java.lang.Object","java.lang.Object"] }, 
+    {"name":"zunion","parameterTypes":["io.lettuce.core.ZAggregateArgs","java.lang.Object[]"] }, 
+    {"name":"zunion","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"zunionWithScores","parameterTypes":["io.lettuce.core.ZAggregateArgs","java.lang.Object[]"] }, 
+    {"name":"zunionWithScores","parameterTypes":["java.lang.Object[]"] }, 
+    {"name":"zunionstore","parameterTypes":["java.lang.Object","io.lettuce.core.ZStoreArgs","java.lang.Object[]"] }, 
+    {"name":"zunionstore","parameterTypes":["java.lang.Object","java.lang.Object[]"] }
+  ]
+},
+{
+  "name":"io.lettuce.core.ChannelGroupListener",
+  "queriedMethods":[
+    {"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }
+  ]
+},
+{
+  "name":"io.lettuce.core.ConnectionBuilder$PlainChannelInitializer"
+},
+{
+  "name":"io.lettuce.core.ConnectionEventTrigger",
+  "queriedMethods":[
+    {"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }
+  ]
+},
+{
+  "name":"io.lettuce.core.RedisAsyncCommandsImpl",
+  "queriedMethods":[{"name":"getStatefulConnection","parameterTypes":[] }]
+},
+{
+  "name":"io.lettuce.core.api.sync.BaseRedisCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisAclCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisGeoCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisHLLCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisHashCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisKeyCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisListCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisScriptingCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisServerCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisSetCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisSortedSetCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisStreamCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisStringCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.api.sync.RedisTransactionalCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.cluster.api.sync.RedisClusterCommands",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.lettuce.core.event.connection.JfrConnectEvent",
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":["io.lettuce.core.event.connection.ConnectEvent"] }]
+},
+{
+  "name":"io.lettuce.core.event.connection.JfrConnectedEvent",
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":["io.lettuce.core.event.connection.ConnectionEventSupport"] }]
+},
+{
+  "name":"io.lettuce.core.event.connection.JfrConnectionActivatedEvent",
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":["io.lettuce.core.event.connection.ConnectionEventSupport"] }]
+},
+{
+  "name":"io.lettuce.core.event.connection.JfrConnectionCreatedEvent",
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":["io.lettuce.core.event.connection.ConnectionCreatedEvent"] }]
+},
+{
+  "name":"io.lettuce.core.event.connection.JfrConnectionDeactivatedEvent",
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":["io.lettuce.core.event.connection.ConnectionEventSupport"] }]
+},
+{
+  "name":"io.lettuce.core.event.connection.JfrDisconnectedEvent",
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":["io.lettuce.core.event.connection.ConnectionEventSupport"] }]
+},
+{
+  "name":"io.lettuce.core.protocol.CommandEncoder"
+},
+{
+  "name":"io.lettuce.core.protocol.CommandHandler",
+  "queriedMethods":[
+    {"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRead","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelUnregistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, 
+    {"name":"userEventTriggered","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"write","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object","io.netty.channel.ChannelPromise"] }
+  ]
+},
+{
+  "name":"io.lettuce.core.protocol.ConnectionWatchdog",
+  "queriedMethods":[
+    {"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }
+  ]
+},
+{
+  "name":"io.lettuce.core.protocol.RedisHandshakeHandler",
+  "queriedMethods":[
+    {"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }
+  ]
+},
+{
+  "name":"io.netty.buffer.AbstractByteBufAllocator",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.netty.buffer.AbstractReferenceCountedByteBuf",
+  "fields":[{"name":"refCnt"}]
+},
+{
+  "name":"io.netty.channel.ChannelDuplexHandler",
+  "queriedMethods":[
+    {"name":"bind","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","io.netty.channel.ChannelPromise"] }, 
+    {"name":"close","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, 
+    {"name":"connect","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","java.net.SocketAddress","io.netty.channel.ChannelPromise"] }, 
+    {"name":"deregister","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, 
+    {"name":"disconnect","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, 
+    {"name":"flush","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"read","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }
+  ]
+},
+{
+  "name":"io.netty.channel.ChannelHandlerAdapter",
+  "queriedMethods":[{"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }]
+},
+{
+  "name":"io.netty.channel.ChannelInboundHandlerAdapter",
+  "queriedMethods":[
+    {"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRead","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"channelReadComplete","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelUnregistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelWritabilityChanged","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, 
+    {"name":"userEventTriggered","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }
+  ]
+},
+{
+  "name":"io.netty.channel.ChannelInitializer",
+  "queriedMethods":[
+    {"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }
+  ]
+},
+{
+  "name":"io.netty.channel.ChannelOutboundHandlerAdapter",
+  "queriedMethods":[
+    {"name":"bind","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","io.netty.channel.ChannelPromise"] }, 
+    {"name":"close","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, 
+    {"name":"connect","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","java.net.SocketAddress","io.netty.channel.ChannelPromise"] }, 
+    {"name":"deregister","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, 
+    {"name":"disconnect","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, 
+    {"name":"flush","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"read","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }
+  ]
+},
+{
+  "name":"io.netty.channel.DefaultChannelPipeline$HeadContext",
+  "queriedMethods":[
+    {"name":"bind","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","io.netty.channel.ChannelPromise"] }, 
+    {"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRead","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"channelReadComplete","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelUnregistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelWritabilityChanged","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"close","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, 
+    {"name":"connect","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","java.net.SocketAddress","io.netty.channel.ChannelPromise"] }, 
+    {"name":"deregister","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, 
+    {"name":"disconnect","parameterTypes":["io.netty.channel.ChannelHandlerContext","io.netty.channel.ChannelPromise"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, 
+    {"name":"flush","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"read","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"userEventTriggered","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"write","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object","io.netty.channel.ChannelPromise"] }
+  ]
+},
+{
+  "name":"io.netty.channel.DefaultChannelPipeline$TailContext",
+  "queriedMethods":[
+    {"name":"channelActive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRead","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"channelReadComplete","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRegistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelUnregistered","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelWritabilityChanged","parameterTypes":["io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, 
+    {"name":"userEventTriggered","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object"] }
+  ]
+},
+{
+  "name":"io.netty.channel.socket.nio.NioSocketChannel",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"io.netty.handler.codec.MessageToByteEncoder",
+  "queriedMethods":[{"name":"write","parameterTypes":["io.netty.channel.ChannelHandlerContext","java.lang.Object","io.netty.channel.ChannelPromise"] }]
+},
+{
+  "name":"io.netty.util.ReferenceCountUtil",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueColdProducerFields",
+  "fields":[{"name":"producerLimit"}]
+},
+{
+  "name":"io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueConsumerFields",
+  "fields":[{"name":"consumerIndex"}]
+},
+{
+  "name":"io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueProducerFields",
+  "fields":[{"name":"producerIndex"}]
+},
+{
+  "name":"io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueConsumerIndexField",
+  "fields":[{"name":"consumerIndex"}]
+},
+{
+  "name":"io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerIndexField",
+  "fields":[{"name":"producerIndex"}]
+},
+{
+  "name":"io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerLimitField",
+  "fields":[{"name":"producerLimit"}]
+},
+{
+  "name":"java.lang.Boolean",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Byte",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Character",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.ClassValue"
+},
+{
+  "name":"java.lang.Double",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Float",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Integer",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Long",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.Short",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.StackTraceElement",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.String"
+},
+{
+  "name":"java.lang.Void",
+  "fields":[{"name":"TYPE"}]
+},
+{
+  "name":"java.lang.invoke.VarHandle",
+  "methods":[{"name":"releaseFence","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.management.BufferPoolMXBean",
+  "queryAllPublicMethods":true,
+  "methods":[
+    {"name":"getCount","parameterTypes":[] }, 
+    {"name":"getMemoryUsed","parameterTypes":[] }, 
+    {"name":"getName","parameterTypes":[] }, 
+    {"name":"getTotalCapacity","parameterTypes":[] }
+  ]
+},
+{
+  "name":"java.lang.management.ClassLoadingMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.CompilationMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.LockInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.ManagementFactory",
+  "methods":[
+    {"name":"getPlatformMXBeans","parameterTypes":["java.lang.Class"] }, 
+    {"name":"getRuntimeMXBean","parameterTypes":[] }
+  ]
+},
+{
+  "name":"java.lang.management.ManagementPermission",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.management.MemoryMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.MemoryManagerMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.MemoryPoolMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.MemoryUsage",
+  "queryAllPublicMethods":true,
+  "methods":[{"name":"from","parameterTypes":["javax.management.openmbean.CompositeData"] }]
+},
+{
+  "name":"java.lang.management.MonitorInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.PlatformLoggingMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.management.RuntimeMXBean",
+  "queryAllPublicMethods":true,
+  "methods":[
+    {"name":"getInputArguments","parameterTypes":[] }, 
+    {"name":"getName","parameterTypes":[] }
+  ]
+},
+{
+  "name":"java.lang.management.ThreadInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"java.math.BigDecimal"
+},
+{
+  "name":"java.math.BigInteger"
+},
+{
+  "name":"java.nio.Bits",
+  "fields":[{"name":"UNALIGNED"}]
+},
+{
+  "name":"java.nio.Buffer",
+  "fields":[{"name":"address"}]
+},
+{
+  "name":"java.nio.ByteBuffer",
+  "queriedMethods":[{"name":"alignedSlice","parameterTypes":["int"] }]
+},
+{
+  "name":"java.nio.DirectByteBuffer",
+  "queriedMethods":[{"name":"<init>","parameterTypes":["long","int"] }]
+},
+{
+  "name":"java.security.MessageDigestSpi"
+},
+{
+  "name":"java.util.Date"
+},
+{
+  "name":"java.util.PropertyPermission",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.String","java.lang.String"] }]
+},
+{
+  "name":"java.util.logging.LogManager",
+  "methods":[{"name":"getLoggingMXBean","parameterTypes":[] }]
+},
+{
+  "name":"java.util.logging.LoggingMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"javax.management.MBeanOperationInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"javax.management.MBeanServerBuilder",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javax.management.ObjectName"
+},
+{
+  "name":"javax.management.openmbean.CompositeData"
+},
+{
+  "name":"javax.management.openmbean.OpenMBeanOperationInfoSupport"
+},
+{
+  "name":"javax.management.openmbean.TabularData"
+},
+{
+  "name":"jdk.internal.misc.Unsafe",
+  "methods":[{"name":"getUnsafe","parameterTypes":[] }]
+},
+{
+  "name":"jdk.jfr.Event"
+},
+{
+  "name":"jdk.management.jfr.ConfigurationInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.EventTypeInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.FlightRecorderMXBean",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.FlightRecorderMXBeanImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"jdk.management.jfr.RecordingInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"jdk.management.jfr.SettingDescriptorInfo",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"scala.Symbol",
+  "methods":[{"name":"apply","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"scala.reflect.ScalaSignature",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"sun.management.ClassLoadingImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.CompilationImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.ManagementFactoryHelper$1",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.ManagementFactoryHelper$PlatformLoggingImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.MemoryImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.MemoryManagerImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.MemoryPoolImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.management.RuntimeImpl",
+  "queryAllPublicConstructors":true
+},
+{
+  "name":"sun.misc.Signal",
+  "methods":[
+    {"name":"<init>","parameterTypes":["java.lang.String"] }, 
+    {"name":"handle","parameterTypes":["sun.misc.Signal","sun.misc.SignalHandler"] }
+  ]
+},
+{
+  "name":"sun.misc.SignalHandler"
+},
+{
+  "name":"sun.misc.Unsafe",
+  "fields":[{"name":"theUnsafe"}],
+  "methods":[{"name":"invokeCleaner","parameterTypes":["java.nio.ByteBuffer"] }],
+  "queriedMethods":[
+    {"name":"copyMemory","parameterTypes":["java.lang.Object","long","java.lang.Object","long","long"] }, 
+    {"name":"getAndAddLong","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"getAndSetObject","parameterTypes":["java.lang.Object","long","java.lang.Object"] }
+  ]
+},
+{
+  "name":"sun.nio.ch.SelectorImpl",
+  "fields":[
+    {"name":"publicSelectedKeys"}, 
+    {"name":"selectedKeys"}
+  ]
+},
+{
+  "name":"sun.security.provider.MD5",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+}
+]
