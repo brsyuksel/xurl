@@ -131,3 +131,5 @@ docker run --rm --network host xurl:latest
 - ~~github actions for ci~~ [PR#9](https://github.com/brsyuksel/xurl/pull/9)
 - scala 3
 - ~~graalvm native image~~ [PR#30](https://github.com/brsyuksel/xurl/pull/30)
+- [exp] buld native image with musl
+- load testing
