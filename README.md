@@ -110,6 +110,15 @@ the grafana' default credentials have been used so you can log in with **admin**
 
 the dashboard name is `xurl`, you can also take a look community-driven `postgres` and `redis` dashboards to see metrics of them. 
 
+## docker container
+
+after building a docker image for the project by using a command like `docker build . -t xurl:latest`, you should create a container using the host network since the configuration is not updated:
+```
+docker run --rm --network host xurl:latest
+```
+
+>> graalvm native image causes a bug on the metrics endpoint that are used by prometheus, the relevant endpoint somehow returns 500 for requests.
+
 ## todo
 
 - basen character uniqueness tests
