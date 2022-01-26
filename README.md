@@ -121,4 +121,4 @@ the dashboard name is `xurl`, you can also take a look community-driven `postgre
 - clear error messages
 - ~~github actions for ci~~ [PR#9](https://github.com/brsyuksel/xurl/pull/9)
 - scala 3
-- graalvm native image
+- ~~graalvm native image~~ [PR#30](https://github.com/brsyuksel/xurl/pull/30)
