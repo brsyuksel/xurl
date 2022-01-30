@@ -132,4 +132,4 @@ docker run --rm --network host xurl:latest
 - scala 3
 - ~~graalvm native image~~ [PR#30](https://github.com/brsyuksel/xurl/pull/30)
 - [exp] buld native image with musl
-- load testing
+- ~~load testing~~ [PR#32](https://github.com/brsyuksel/xurl/pull/32)
