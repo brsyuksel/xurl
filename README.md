@@ -10,15 +10,15 @@ yet another link shortener service but purely functional.
 
 ## tech stack
 
-| library     | version |
-|-------------|---------|
-| cats        | 2.7.0   |
-| cats-effect | 3.3.5   |
-| skunk       | 0.2.3   |
-| redis4cats  | 1.0.0   |
-| http4s      | 0.23.9  |
-| circe       | 0.14.1  |
-| weaver      | 0.7.9   |
+| library     | version  |
+|-------------|----------|
+| cats        | 2.7.0    |
+| cats-effect | 3.3.5    |
+| skunk       | 0.2.3    |
+| redis4cats  | 1.0.0    |
+| http4s      | 0.23.10  |
+| circe       | 0.14.1   |
+| weaver      | 0.7.9    |
 
 ## testing
 
