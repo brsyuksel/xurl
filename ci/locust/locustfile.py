@@ -6,7 +6,6 @@ from locust import HttpUser, task
 
 
 class XURLUser(HttpUser):
-
     @task(1)
     def health_check(self):
         with self.client.get("/_health", catch_response=True) as response:
@@ -15,9 +14,9 @@ class XURLUser(HttpUser):
                     response.failure("health check endpoint failed")
                 else:
                     body = response.json()
-                    if not body['storage']:
+                    if not body["storage"]:
                         response.failure("storage health failed")
-                    elif not body['cache']:
+                    elif not body["cache"]:
                         response.failure("cache health failed")
                     else:
                         response.success()
@@ -25,15 +24,15 @@ class XURLUser(HttpUser):
                 response.failure("json error")
             except KeyError:
                 response.failure("key error")
-            
-    
+
     @task(2)
     def create(self):
         with self.client.post(
             "/api/v1/urls",
             json={"url": "https://httpbin.org/get?from=locust"},
-            catch_response=True) as response:
-        
+            catch_response=True,
+        ) as response:
+
             if response.status_code == 201:
                 response.success()
             else:
@@ -42,7 +41,9 @@ class XURLUser(HttpUser):
     @task(3)
     def redirect(self):
         key = random.choice(string.ascii_letters)
-        with self.client.get(f"/{key}", catch_response=True) as response:
+        with self.client.get(
+            f"/{key}", catch_response=True, name="/{key}"
+        ) as response:
             if response.status_code in [301, 404, 200]:
                 response.success()
             else:
@@ -55,7 +56,11 @@ class XURLUser(HttpUser):
     @task(1)
     def detail(self):
         key = random.choice(string.ascii_letters)
-        with self.client.get(f"/api/v1/urls/{key}", catch_response=True) as response:
+        with self.client.get(
+            f"/api/v1/urls/{key}",
+            catch_response=True,
+            name="/api/v1/urls/{key}",
+        ) as response:
             if response.status_code in [200, 404]:
                 response.success()
             else:
