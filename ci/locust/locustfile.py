@@ -42,7 +42,7 @@ class XURLUser(HttpUser):
     @task(3)
     def redirect(self):
         key = random.choice(string.ascii_letters)
-        with self.client.get(f"/{key}", catch_response=True) as response:
+        with self.client.get(f"/{key}", catch_response=True, name="/{key}") as response:
             if response.status_code in [301, 404, 200]:
                 response.success()
             else:
@@ -55,7 +55,7 @@ class XURLUser(HttpUser):
     @task(1)
     def detail(self):
         key = random.choice(string.ascii_letters)
-        with self.client.get(f"/api/v1/urls/{key}", catch_response=True) as response:
+        with self.client.get(f"/api/v1/urls/{key}", catch_response=True, name="/api/v1/urls/{key}") as response:
             if response.status_code in [200, 404]:
                 response.success()
             else:
