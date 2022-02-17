@@ -18,7 +18,7 @@ yet another link shortener service but purely functional.
 | redis4cats  | 1.1.1    |
 | http4s      | 0.23.10  |
 | circe       | 0.14.1   |
-| weaver      | 0.7.9    |
+| weaver      | 0.7.10   |
 
 ## testing
 
