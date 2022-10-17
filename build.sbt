@@ -1,6 +1,6 @@
 import Dependencies._
 
-ThisBuild / scalaVersion     := "2.13.8"
+ThisBuild / scalaVersion     := "2.13.10"
 ThisBuild / version          := "0.1.0"
 ThisBuild / organization     := "xurl"
 ThisBuild / organizationName := "xurl"
@@ -35,8 +35,8 @@ lazy val root = (project in file("."))
       "-H:ResourceConfigurationFiles=../../ci/native-image-configs/resource-config.json",
       "-H:ReflectionConfigurationFiles=../../ci/native-image-configs/reflect-config.json",
       "-H:JNIConfigurationFiles=../../ci/native-image-configs/jni-config.json",
-      "-H:DynamicProxyConfigurationFiles=../../ci/native-image-configs/proxy-config.json",
-    ),
+      "-H:DynamicProxyConfigurationFiles=../../ci/native-image-configs/proxy-config.json"
+    )
   )
   .enablePlugins(GraalVMNativeImagePlugin)
 
