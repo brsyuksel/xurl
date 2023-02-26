@@ -14,7 +14,7 @@ yet another link shortener service but purely functional.
 |-------------|----------|
 | cats        | 2.9.0    |
 | cats-effect | 3.4.8    |
-| skunk       | 0.3.2    |
+| skunk       | 0.5.1    |
 | redis4cats  | 1.4.0    |
 | http4s      | 0.23.14  |
 | circe       | 0.14.2   |
