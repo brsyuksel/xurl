@@ -13,14 +13,14 @@ final case class SkunkUrls[F[_]: Concurrent](pg: Resource[F, Session[F]]) extend
 
   override def list(offset: Int, limit: Int): F[List[Url]] =
     pg.use { s =>
-      s.prepare(SQL.paginatedList).use { p =>
+      s.prepare(SQL.paginatedList) >>= { p =>
         p.stream(limit ~ offset, 1024).compile.toList
       }
     }
 
   override def get(code: Code): F[Option[Url]] =
     pg.use { s =>
-      s.prepare(SQL.getByCode).use { p =>
+      s.prepare(SQL.getByCode) >>= { p =>
         p.option(code)
       }
     }
@@ -28,14 +28,14 @@ final case class SkunkUrls[F[_]: Concurrent](pg: Resource[F, Session[F]]) extend
   // TODO: handle code uniqueness error
   override def create(url: Url): F[Code] =
     pg.use { s =>
-      s.prepare(SQL.insertUrl).use { p =>
+      s.prepare(SQL.insertUrl) >>= { p =>
         p.execute(url.code ~ url.address).as(url.code)
       }
     }
 
   override def hit(code: Code): F[Unit] =
     pg.use { s =>
-      s.prepare(SQL.increaseHit).use { p =>
+      s.prepare(SQL.increaseHit) >>= { p =>
         p.execute(code).void
       }
     }
