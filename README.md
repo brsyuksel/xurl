@@ -13,12 +13,12 @@ yet another link shortener service but purely functional.
 | library     | version  |
 |-------------|----------|
 | cats        | 2.9.0    |
-| cats-effect | 3.4.8    |
+| cats-effect | 3.4.11   |
 | skunk       | 0.5.1    |
 | redis4cats  | 1.4.1    |
 | http4s      | 0.23.14  |
 | circe       | 0.14.2   |
-| weaver      | 0.8.2    |
+| weaver      | 0.8.3    |
 
 ## testing
 
