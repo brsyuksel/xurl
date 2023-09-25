@@ -1,6 +1,6 @@
 import Dependencies._
 
-ThisBuild / scalaVersion     := "2.13.10"
+ThisBuild / scalaVersion     := "2.13.12"
 ThisBuild / version          := "0.1.0"
 ThisBuild / organization     := "xurl"
 ThisBuild / organizationName := "xurl"
@@ -24,6 +24,7 @@ lazy val root = (project in file("."))
     scalafixSettings,
     testFrameworks += TestFramework("weaver.framework.CatsEffect"),
     libraryDependencies ++= dependencies,
+    dependencyOverrides ++= overrides,
     assembly / mainClass       := Some("xurl.main"),
     assembly / assemblyJarName := "xurl-assembly.jar",
     // java -agentlib:native-image-agent=config-output-dir=./ci/native-image-configs -jar xurl-assembly.jar

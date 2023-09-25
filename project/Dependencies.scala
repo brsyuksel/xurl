@@ -2,18 +2,18 @@ import sbt._
 
 object Dependencies {
   object versions {
-    val catsEffect       = "3.4.11"
-    val cats             = "2.9.0"
+    val catsEffect       = "3.5.1"
+    val cats             = "2.10.0"
     val newtype          = "0.4.4"
     val refined          = "0.10.3"
     val derevo           = "0.13.0"
     val log4cats         = "2.6.0"
-    val redis            = "1.4.1"
     val skunk            = "0.6.0"
-    val circe            = "0.14.2"
-    val http4s           = "0.23.15"
-    val http4sPrometheus = "0.24.3"
-    val slf4j            = "2.0.7"
+    val redis            = "1.4.3"
+    val circe            = "0.14.6"
+    val http4s           = "0.23.23"
+    val http4sPrometheus = "0.24.4"
+    val slf4j            = "2.0.9"
     val pureConfig       = "0.17.4"
 
     val weaver = "0.8.3"
@@ -86,6 +86,10 @@ object Dependencies {
     libraries.log4catsNoOp,
     libraries.circeLiteral
   ).map(_ % "it,test")
+
+  val overrides = Seq(
+    libraries.circeCore,
+  )
 
   val dependencies = runtime ++ testing
 }
