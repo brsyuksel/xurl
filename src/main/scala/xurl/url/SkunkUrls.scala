@@ -44,7 +44,7 @@ final case class SkunkUrls[F[_]: Concurrent](pg: Resource[F, Session[F]]) extend
 
 object SkunkUrls {
   private case object SQL {
-    val paginatedList: Query[Int ~ Int, Url] =
+    val paginatedList: Query[Int *: Int *: EmptyTuple, Url] =
       sql"""
       SELECT *
         FROM urls
@@ -59,7 +59,7 @@ object SkunkUrls {
        WHERE code = $code
       """.query(url)
 
-    val insertUrl: Command[Code ~ Address] =
+    val insertUrl: Command[Code *: Address *: EmptyTuple] =
       sql"""
       INSERT INTO urls (code, address)
       VALUES ($code, $address)
