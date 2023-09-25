@@ -24,6 +24,7 @@ lazy val root = (project in file("."))
     scalafixSettings,
     testFrameworks += TestFramework("weaver.framework.CatsEffect"),
     libraryDependencies ++= dependencies,
+    dependencyOverrides ++= overrides,
     assembly / mainClass       := Some("xurl.main"),
     assembly / assemblyJarName := "xurl-assembly.jar",
     // java -agentlib:native-image-agent=config-output-dir=./ci/native-image-configs -jar xurl-assembly.jar
