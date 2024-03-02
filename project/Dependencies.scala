@@ -2,21 +2,21 @@ import sbt._
 
 object Dependencies {
   object versions {
-    val catsEffect       = "3.5.2"
+    val catsEffect       = "3.5.3"
     val cats             = "2.10.0"
     val newtype          = "0.4.4"
-    val refined          = "0.11.0"
+    val refined          = "0.11.1"
     val derevo           = "0.13.0"
     val log4cats         = "2.6.0"
-    val skunk            = "0.6.0"
-    val redis            = "1.5.0"
+    val skunk            = "0.6.3"
+    val redis            = "1.5.2"
     val circe            = "0.14.6"
-    val http4s           = "0.23.23"
-    val http4sPrometheus = "0.24.5"
+    val http4s           = "0.23.25"
+    val http4sPrometheus = "0.24.6"
     val slf4j            = "2.0.12"
     val pureConfig       = "0.17.4"
 
-    val weaver = "0.8.3"
+    val weaver = "0.8.4"
 
     val scalafixOrganizeImports = "0.6.0"
   }
