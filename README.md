@@ -18,7 +18,7 @@ yet another link shortener service but purely functional.
 | skunk       | 0.6.3    |
 | redis4cats  | 1.5.2    |
 | circe       | 0.14.6   |
-| weaver      | 0.8.3    |
+| weaver      | 0.8.4    |
 
 ## testing
 
