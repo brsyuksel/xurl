@@ -60,7 +60,7 @@ object UrlRoutesSuite extends SimpleIOSuite with Checkers {
     addr => Url(Code("slient"), addr, Hit(0), Some(utcNow)).pure[IO]
 
   private def mkFailingShortener: Shortener[IO] =
-    addr => IO.raiseError(Shortener.NotStoredError)
+    _ => IO.raiseError(Shortener.NotStoredError)
 
   test("list-urls:first-page") {
     forall(Gen.listOf(urlsGen)) { l =>
