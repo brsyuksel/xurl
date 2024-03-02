@@ -14,7 +14,7 @@ object Dependencies {
     val http4s           = "0.23.25"
     val http4sPrometheus = "0.24.6"
     val slf4j            = "2.0.12"
-    val pureConfig       = "0.17.4"
+    val pureConfig       = "0.17.6"
 
     val weaver = "0.8.4"
 
