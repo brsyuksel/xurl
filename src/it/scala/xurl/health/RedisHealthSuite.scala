@@ -3,11 +3,12 @@ package xurl.health
 import cats.effect._
 import dev.profunktor.redis4cats.log4cats._
 import dev.profunktor.redis4cats.{ Redis, RedisCommands }
+import org.typelevel.log4cats.Logger
 import org.typelevel.log4cats.noop.NoOpLogger
 import weaver.IOSuite
 
 object RedisHealthSuite extends IOSuite {
-  implicit val logger = NoOpLogger[IO]
+  implicit val logger: Logger[IO] = NoOpLogger[IO]
 
   type Res = RedisCommands[IO, String, String]
 

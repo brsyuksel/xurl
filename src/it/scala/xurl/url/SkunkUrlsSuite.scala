@@ -85,9 +85,9 @@ object SkunkUrlsSuite extends IOSuite {
       serial   <- serialCode(100)
       codesRes <- List.fill(10)(serial.next).sequence
       codes = codesRes.map(Code(_))
-      created <- codes.map(c => Url(c, Address("list-testing"))).map(urls.create).sequence
-      p1      <- urls.list(0, 5)
-      p2      <- urls.list(5, 5)
+      _  <- codes.map(c => Url(c, Address("list-testing"))).map(urls.create).sequence
+      p1 <- urls.list(0, 5)
+      p2 <- urls.list(5, 5)
     } yield expect(p1.size === 5) &&
       expect(p2.size === 5) &&
       expect(p1.map(_.code) === codes.take(5))
