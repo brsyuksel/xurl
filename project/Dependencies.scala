@@ -7,7 +7,7 @@ object Dependencies {
     val newtype          = "0.4.4"
     val refined          = "0.11.1"
     val derevo           = "0.13.0"
-    val log4cats         = "2.6.0"
+    val log4cats         = "2.7.0"
     val skunk            = "0.6.3"
     val redis            = "1.7.0"
     val circe            = "0.14.7"
