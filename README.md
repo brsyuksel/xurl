@@ -12,7 +12,7 @@ yet another link shortener service but purely functional.
 
 | library     | version  |
 |-------------|----------|
-| cats        | 2.10.0   |
+| cats        | 2.12.0   |
 | cats-effect | 3.5.4    |
 | http4s      | 0.23.27  |
 | skunk       | 0.6.4    |
