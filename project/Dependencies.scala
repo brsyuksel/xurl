@@ -5,7 +5,7 @@ object Dependencies {
     val catsEffect       = "3.5.7"
     val cats             = "2.12.0"
     val newtype          = "0.4.4"
-    val refined          = "0.11.2"
+    val refined          = "0.11.3"
     val derevo           = "0.13.0"
     val log4cats         = "2.7.0"
     val skunk            = "0.6.4"
