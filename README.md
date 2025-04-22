@@ -13,7 +13,7 @@ yet another link shortener service but purely functional.
 | library     | version  |
 |-------------|----------|
 | cats        | 2.13.0   |
-| cats-effect | 3.5.7    |
+| cats-effect | 3.6.1    |
 | http4s      | 0.23.30  |
 | skunk       | 0.6.4    |
 | redis4cats  | 1.7.2    |
