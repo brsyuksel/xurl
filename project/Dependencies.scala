@@ -16,7 +16,7 @@ object Dependencies {
     val slf4j            = "2.0.17"
     val pureConfig       = "0.17.9"
 
-    val weaver = "0.8.4"
+    val weaver = "0.9.0"
 
     val scalafixOrganizeImports = "0.6.0"
   }
@@ -45,11 +45,11 @@ object Dependencies {
     val http4sPrometheus    = "org.http4s"            %% "http4s-prometheus-metrics" % versions.http4sPrometheus
     val pureConfig          = "com.github.pureconfig" %% "pureconfig"                % versions.pureConfig
 
-    val weaverCats       = "com.disneystreaming" %% "weaver-cats"       % versions.weaver
-    val weaverDiscipline = "com.disneystreaming" %% "weaver-discipline" % versions.weaver
-    val weaverScalaCheck = "com.disneystreaming" %% "weaver-scalacheck" % versions.weaver
-    val log4catsNoOp     = "org.typelevel"       %% "log4cats-noop"     % versions.log4cats
-    val circeLiteral     = "io.circe"            %% "circe-literal"     % versions.circe
+    val weaverCats       = "org.typelevel" %% "weaver-cats"       % versions.weaver
+    val weaverDiscipline = "org.typelevel" %% "weaver-discipline" % versions.weaver
+    val weaverScalaCheck = "org.typelevel" %% "weaver-scalacheck" % versions.weaver
+    val log4catsNoOp     = "org.typelevel" %% "log4cats-noop"     % versions.log4cats
+    val circeLiteral     = "io.circe"      %% "circe-literal"     % versions.circe
 
     val scalafixOrganizeImports = "com.github.liancheng" %% "organize-imports" % versions.scalafixOrganizeImports
   }
