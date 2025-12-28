@@ -10,7 +10,7 @@ object Dependencies {
     val log4cats         = "2.7.1"
     val skunk            = "0.6.5"
     val circe            = "0.14.9"
-    val redis            = "2.0.1"
+    val redis            = "2.0.2"
     val http4sPrometheus = "0.25.0"
     val http4s           = "0.23.33"
     val slf4j            = "2.0.17"
