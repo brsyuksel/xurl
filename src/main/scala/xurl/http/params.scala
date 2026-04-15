@@ -3,8 +3,8 @@ package xurl.http
 import xurl.url.model.Address
 
 import eu.timepit.refined.api.{ Refined, Validate }
-import eu.timepit.refined.string.Url
 import eu.timepit.refined.refineV
+import eu.timepit.refined.string.Url
 import io.estatico.newtype.macros.newtype
 import play.api.libs.json._
 

@@ -1,7 +1,7 @@
 package xurl.health
 
-import derevo.derive
 import derevo.cats.{ eqv, show }
+import derevo.derive
 import io.estatico.newtype.macros.newtype
 import play.api.libs.json._
 

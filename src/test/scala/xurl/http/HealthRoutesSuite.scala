@@ -7,8 +7,8 @@ import _root_.play.api.libs.json._
 import cats.effect._
 import cats.implicits._
 import fs2.Chunk
-import org.http4s._
 import org.http4s.Method._
+import org.http4s._
 import org.http4s.client.dsl.io._
 import org.http4s.syntax.literals._
 import org.scalacheck.Gen
