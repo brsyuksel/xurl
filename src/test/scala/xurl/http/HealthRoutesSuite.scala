@@ -3,12 +3,12 @@ package xurl.http
 import xurl.health.model.{ Status => HStat, _ }
 import xurl.services.HealthCheck
 
+import _root_.play.api.libs.json._
 import cats.effect._
 import cats.implicits._
-import io.circe.literal._
-import io.circe.syntax._
+import fs2.Chunk
+import org.http4s._
 import org.http4s.Method._
-import org.http4s.circe._
 import org.http4s.client.dsl.io._
 import org.http4s.syntax.literals._
 import org.scalacheck.Gen
@@ -16,6 +16,19 @@ import weaver.SimpleIOSuite
 import weaver.scalacheck.Checkers
 
 object HealthRoutesSuite extends SimpleIOSuite with Checkers {
+
+  // EntityEncoder/EntityDecoder for play-json types
+  implicit def jsValueEntityEncoder: EntityEncoder[IO, JsValue] =
+    EntityEncoder[IO, Chunk[Byte]]
+      .contramap[JsValue] { json =>
+        val bytes = Json.stringify(json).getBytes(java.nio.charset.StandardCharsets.UTF_8)
+        Chunk.array(bytes)
+      }
+      .withContentType(org.http4s.headers.`Content-Type`(MediaType.application.json))
+
+  implicit def jsValueEntityDecoder: EntityDecoder[IO, JsValue] =
+    EntityDecoder.text[IO].map(Json.parse)
+
   private def mkHealthCheck(s: Boolean, c: Boolean): HealthCheck[IO] =
     new HealthCheck[IO] {
       def status: IO[HStat] =
@@ -33,13 +46,13 @@ object HealthRoutesSuite extends SimpleIOSuite with Checkers {
       val health   = mkHealthCheck(s, c)
       val routes   = HealthRoutes[IO](health).routes
       val req      = GET(uri"/")
-      val expected = json"""{"storage": $s, "cache": $c}"""
+      val expected = Json.obj("storage" -> JsBoolean(s), "cache" -> JsBoolean(c))
 
       routes.run(req).value.flatMap {
         case None => failure("endpoint not found").pure[IO]
         case Some(res) =>
-          res.asJson.map { json =>
-            expect(json.dropNullValues == expected.asJson.dropNullValues)
+          res.as[JsValue].map { json =>
+            expect(json == expected)
           }
       }
     }

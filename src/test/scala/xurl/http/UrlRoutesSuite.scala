@@ -6,13 +6,13 @@ import xurl.services.Shortener
 import xurl.url.Urls
 import xurl.url.model._
 
+import _root_.play.api.libs.json._
+import cats.data.EitherT
 import cats.effect._
 import cats.implicits._
-import io.circe.literal._
-import io.circe.syntax._
-import org.http4s.Method._
+import fs2.Chunk
 import org.http4s._
-import org.http4s.circe._
+import org.http4s.Method._
 import org.http4s.client.dsl.io._
 import org.http4s.syntax.literals._
 import org.scalacheck.Gen
@@ -20,6 +20,23 @@ import weaver.SimpleIOSuite
 import weaver.scalacheck.Checkers
 
 object UrlRoutesSuite extends SimpleIOSuite with Checkers {
+
+  // EntityEncoder/EntityDecoder for play-json types
+  implicit def jsValueEntityEncoder: EntityEncoder[IO, JsValue] =
+    EntityEncoder[IO, Chunk[Byte]]
+      .contramap[JsValue] { json =>
+        val bytes = Json.stringify(json).getBytes(java.nio.charset.StandardCharsets.UTF_8)
+        Chunk.array(bytes)
+      }
+      .withContentType(org.http4s.headers.`Content-Type`(MediaType.application.json))
+
+  // Support JsObject as well (it's a subtype of JsValue)
+  implicit def jsObjectEntityEncoder: EntityEncoder[IO, JsObject] =
+    jsValueEntityEncoder.contramap[JsObject](identity)
+
+  implicit def jsValueEntityDecoder: EntityDecoder[IO, JsValue] =
+    EntityDecoder.text[IO].map(Json.parse)
+
   val strGen: Gen[String] =
     Gen
       .chooseNum(3, 10)
@@ -72,9 +89,9 @@ object UrlRoutesSuite extends SimpleIOSuite with Checkers {
       routes.run(req).value.flatMap {
         case None => failure("endpoint not found").pure[IO]
         case Some(res) =>
-          res.asJson.map { json =>
+          res.as[JsValue].map { json =>
             expect(res.status == Status.Ok) &&
-            expect(json.dropNullValues == l.take(10).asJson.dropNullValues)
+            expect(json == Json.toJson(l.take(10)))
           }
       }
     }
@@ -90,9 +107,9 @@ object UrlRoutesSuite extends SimpleIOSuite with Checkers {
       routes.run(req).value.flatMap {
         case None => failure("endpoint not found").pure[IO]
         case Some(res) =>
-          res.asJson.map { json =>
+          res.as[JsValue].map { json =>
             expect(res.status == Status.Ok) &&
-            expect(json.dropNullValues == l.drop(10).take(20).asJson.dropNullValues)
+            expect(json == Json.toJson(l.drop(10).take(20)))
           }
       }
     }
@@ -108,9 +125,9 @@ object UrlRoutesSuite extends SimpleIOSuite with Checkers {
       routes.run(req).value.flatMap {
         case None => failure("endpoint not found").pure[IO]
         case Some(res) =>
-          res.asJson.map { json =>
+          res.as[JsValue].map { json =>
             expect(res.status == Status.Ok) &&
-            expect(json.dropNullValues == u.asJson.dropNullValues)
+            expect(json == Json.toJson(u))
           }
       }
     }
@@ -133,7 +150,7 @@ object UrlRoutesSuite extends SimpleIOSuite with Checkers {
     val urls      = mkUrls(Nil)
     val shortener = mkSlientShortener
     val routes    = UrlRoutes[IO](urls, shortener).routes
-    val req       = POST(json"""{"url": "xxx"}""", uri"/urls")
+    val req       = POST(Json.obj("url" -> JsString("xxx")), uri"/urls")
 
     routes.run(req).value.flatMap {
       case None      => failure("endpoint not found").pure[IO]
@@ -145,18 +162,18 @@ object UrlRoutesSuite extends SimpleIOSuite with Checkers {
     val urls      = mkUrls(Nil)
     val shortener = mkSlientShortener
     val routes    = UrlRoutes[IO](urls, shortener).routes
-    val req       = POST(json"""{"url": "https://test-success.local"}""", uri"/urls")
+    val req       = POST(Json.obj("url" -> JsString("https://test-success.local")), uri"/urls")
 
     routes.run(req).value.flatMap {
       case None => failure("endpoint not found").pure[IO]
       case Some(res) =>
-        res.asJson.map { json =>
-          val c = json.hcursor
+        res.as[JsValue].map { json =>
+          val c = json.as[JsObject].value
           expect(res.status == Status.Created) &&
-          expect(c.get[String]("code").toOption === Some("slient")) &&
-          expect(c.get[String]("address").toOption === Some("https://test-success.local")) &&
-          expect(c.get[Int]("hit").toOption === Some(0)) &&
-          expect(c.get[String]("created_at").toOption.nonEmpty)
+          expect(c.get("code").flatMap(_.asOpt[String]) === Some("slient")) &&
+          expect(c.get("address").flatMap(_.asOpt[String]) === Some("https://test-success.local")) &&
+          expect(c.get("hit").flatMap(_.asOpt[Int]) === Some(0)) &&
+          expect(c.get("created_at").flatMap(_.asOpt[String]).nonEmpty)
         }
     }
   }
@@ -165,7 +182,7 @@ object UrlRoutesSuite extends SimpleIOSuite with Checkers {
     val urls      = mkUrls(Nil)
     val shortener = mkFailingShortener
     val routes    = UrlRoutes[IO](urls, shortener).routes
-    val req       = POST(json"""{"url": "https://test-success.local"}""", uri"/urls")
+    val req       = POST(Json.obj("url" -> JsString("https://test-success.local")), uri"/urls")
 
     routes.run(req).value.flatMap {
       case None => failure("endpoint not found").pure[IO]

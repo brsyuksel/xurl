@@ -9,7 +9,7 @@ object Dependencies {
     val derevo           = "0.14.0"
     val log4cats         = "2.8.0"
     val skunk            = "0.6.5"
-    val circe            = "0.14.9"
+    val playJson         = "3.0.4"
     val redis            = "2.0.3"
     val http4sPrometheus = "0.25.0"
     val http4s           = "0.23.34"
@@ -33,23 +33,19 @@ object Dependencies {
     val skunk               = "org.tpolecat"          %% "skunk-core"                % versions.skunk
     val redis               = "dev.profunktor"        %% "redis4cats-effects"        % versions.redis
     val redisL4C            = "dev.profunktor"        %% "redis4cats-log4cats"       % versions.redis
-    val circeCore           = "io.circe"              %% "circe-core"                % versions.circe
-    val circeGeneric        = "io.circe"              %% "circe-generic"             % versions.circe
-    val circeParser         = "io.circe"              %% "circe-parser"              % versions.circe
-    val circeRefined        = "io.circe"              %% "circe-refined"             % versions.circe
-    val derevoCirceMagnolia = "tf.tofu"               %% "derevo-circe-magnolia"     % versions.derevo
-    val http4sDsl           = "org.http4s"            %% "http4s-dsl"                % versions.http4s
-    val http4sEmberServer   = "org.http4s"            %% "http4s-ember-server"       % versions.http4s
-    val http4sEmberClient   = "org.http4s"            %% "http4s-ember-client"       % versions.http4s
-    val http4sCirce         = "org.http4s"            %% "http4s-circe"              % versions.http4s
-    val http4sPrometheus    = "org.http4s"            %% "http4s-prometheus-metrics" % versions.http4sPrometheus
-    val pureConfig          = "com.github.pureconfig" %% "pureconfig"                % versions.pureConfig
+    val playJson            = "org.playframework"     %% "play-json"                 % versions.playJson
+    val playJsonDerived     = "org.julienrf"          %% "play-json-derived-codecs"  % "11.0.0"
+    val http4sDsl            = "org.http4s"            %% "http4s-dsl"                % versions.http4s
+    val http4sEmberServer    = "org.http4s"            %% "http4s-ember-server"       % versions.http4s
+    val http4sEmberClient    = "org.http4s"            %% "http4s-ember-client"       % versions.http4s
+    val http4sPlayJson       = "org.http4s"            %% "http4s-play-json"          % "0.23.15"
+    val http4sPrometheus     = "org.http4s"            %% "http4s-prometheus-metrics" % versions.http4sPrometheus
+    val pureConfig           = "com.github.pureconfig" %% "pureconfig"                % versions.pureConfig
 
     val weaverCats       = "org.typelevel" %% "weaver-cats"       % versions.weaver
     val weaverDiscipline = "org.typelevel" %% "weaver-discipline" % versions.weaver
     val weaverScalaCheck = "org.typelevel" %% "weaver-scalacheck" % versions.weaver
     val log4catsNoOp     = "org.typelevel" %% "log4cats-noop"     % versions.log4cats
-    val circeLiteral     = "io.circe"      %% "circe-literal"     % versions.circe
 
     val scalafixOrganizeImports = "com.github.liancheng" %% "organize-imports" % versions.scalafixOrganizeImports
   }
@@ -66,15 +62,12 @@ object Dependencies {
     libraries.skunk,
     libraries.redis,
     libraries.redisL4C,
-    libraries.circeCore,
-    libraries.circeGeneric,
-    libraries.circeParser,
-    libraries.circeRefined,
-    libraries.derevoCirceMagnolia,
+    libraries.playJson,
+    libraries.playJsonDerived,
     libraries.http4sDsl,
     libraries.http4sEmberServer,
     libraries.http4sEmberClient,
-    libraries.http4sCirce,
+    libraries.http4sPlayJson,
     libraries.http4sPrometheus,
     libraries.pureConfig
   )
@@ -83,12 +76,11 @@ object Dependencies {
     libraries.weaverCats,
     libraries.weaverDiscipline,
     libraries.weaverScalaCheck,
-    libraries.log4catsNoOp,
-    libraries.circeLiteral
+    libraries.log4catsNoOp
   ).map(_ % "it,test")
 
   val overrides = Seq(
-    libraries.circeCore
+    libraries.playJson
   )
 
   val dependencies = runtime ++ testing

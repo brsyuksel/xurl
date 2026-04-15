@@ -17,7 +17,7 @@ yet another link shortener service but purely functional.
 | http4s      | 0.23.30  |
 | skunk       | 0.6.4    |
 | redis4cats  | 2.0.0    |
-| circe       | 0.14.9   |
+| play-json   | 3.0.4    |
 | weaver      | 0.9.0    |
 
 ## testing
