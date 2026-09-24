@@ -38,7 +38,7 @@ object Dependencies {
     val http4sDsl         = "org.http4s"            %% "http4s-dsl"                % versions.http4s
     val http4sEmberServer = "org.http4s"            %% "http4s-ember-server"       % versions.http4s
     val http4sEmberClient = "org.http4s"            %% "http4s-ember-client"       % versions.http4s
-    val http4sPlayJson    = "org.http4s"            %% "http4s-play-json"          % "0.23.15"
+    val http4sPlayJson    = "org.http4s"            %% "http4s-play-json"          % "0.23.16"
     val http4sPrometheus  = "org.http4s"            %% "http4s-prometheus-metrics" % versions.http4sPrometheus
     val pureConfig        = "com.github.pureconfig" %% "pureconfig"                % versions.pureConfig
 
