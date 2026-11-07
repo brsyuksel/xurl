@@ -16,7 +16,7 @@ object Dependencies {
     val slf4j            = "2.0.18"
     val pureConfig       = "0.17.10"
 
-    val weaver = "0.12.0"
+    val weaver = "0.13.1"
 
     val scalafixOrganizeImports = "0.6.0"
   }
